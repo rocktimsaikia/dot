@@ -1,2 +1,4 @@
 .git
 .config/tmux
+.config/zsh/.zhistory
+.config/zsh/.zcompdump
