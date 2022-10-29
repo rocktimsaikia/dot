@@ -1,0 +1,15 @@
+require("init-packer")
+require("core/options")
+require("core/autocmds")
+require("core/keymaps")
+
+require("plugins/nvim-treesitter")
+require("plugins/nvim-tree")
+require("plugins/gitsigns")
+require("plugins/nvim-colorizer")
+require("plugins/lualine")
+require("plugins/toggleterm")
+
+require("plugins/lsp/nvim-lspconfig")
+require("plugins/lsp/null-ls")
+require("plugins/lsp/nvim-cmp")
