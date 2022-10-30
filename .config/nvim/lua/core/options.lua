@@ -11,7 +11,7 @@ opt.relativenumber = true
 opt.shiftwidth = 2
 opt.scrolloff = 8
 opt.termguicolors = true
-opt.background = "dark"
+-- opt.background = "dark"
 
 -- Search settings
 opt.ignorecase = true
@@ -32,3 +32,6 @@ opt.splitright = true
 -- g.netrw_list_hide = '\\(^\\|\\s\\s\\)\\zs\\.\\S\\+'
 
 opt.hidden = true
+
+g.git_messenger_floating_win_opts = { border = "rounded" }
+g.git_messenger_popup_content_margins = false

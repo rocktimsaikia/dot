@@ -81,6 +81,7 @@ map("n", "<leader>gss", ':lua require("telescope.builtin").git_stash()<CR>')
 map("n", "<leader>gi", ":Telescope gh issues<CR>")
 map("n", "<leader>gp", ":Telescope gh pull_request author=rocktimsaikia<CR>")
 map("n", "<leader>gr", ":Telescope gh run limit=2<CR>")
+map("n", "<leader>p", ":Telescope workspaces<CR>")
 
 -- harpoon
 map("n", "am", ':lua require("harpoon.mark").add_file()<CR>')
@@ -93,3 +94,10 @@ map("n", "gaa", ":Git add .")
 
 -- neogeon | create functio annotations
 map("n", "<leader>nf", ":lua require('neogen').generate()<CR>")
+
+-- workspaces
+map("n", "<leader>wl", ":WorkspacesList<CR>")
+
+map("n", "S", ":SplitjoinSplit<CR>")
+
+map("n", "<leader>gm", ":GitMessenger<CR>")

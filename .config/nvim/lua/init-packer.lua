@@ -1,7 +1,8 @@
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost init-packer.lua source <afile> | PackerSync
+    autocmd BufWritePost init-packer.lua source <afile> | PackerCompile
+    autocmd BufWritePost init-packer.lua source <afile> | PackerInstall
   augroup end
 ]])
 
@@ -17,25 +18,35 @@ return require("packer").startup(function(use)
 	use("tpope/vim-fugitive") -- Git wrapper. Mostly using for commits and puhsing stuff
 
 	use("nvim-lua/plenary.nvim")
-	use("jiangmiao/auto-pairs")
 	use("wellle/targets.vim") -- provides additional text objects
 	use("nvim-lualine/lualine.nvim")
 	use("norcalli/nvim-colorizer.lua")
+	use("jiangmiao/auto-pairs")
 
 	-- Color schemes
 	use({
-		"ellisonleao/gruvbox.nvim",
+		"sainnhe/gruvbox-material",
 		config = function()
-			vim.cmd("colorscheme gruvbox")
+			vim.g.gruvbox_material_background = "hard"
+			vim.g.gruvbox_material_better_performance = 1
+			vim.cmd("colorscheme gruvbox-material")
 		end,
 	})
-	-- use({
-	-- 	"rose-pine/neovim",
-	-- 	as = "rose-pine",
-	-- 	config = function()
-	-- 		vim.cmd("colorscheme rose-pine")
-	-- 	end,
-	-- })
+	-- use({ "ellisonleao/gruvbox.nvim", config = function() vim.cmd("colorscheme gruvbox") end, })
+	-- use({ "rose-pine/neovim", as = "rose-pine", config = function() vim.cmd("colorscheme rose-pine") end, })
+
+	-- Project/workspace management
+	-- use({ "ahmedkhalf/project.nvim", config = function() require("project_nvim").setup({}) end, })
+	use({
+		"natecraddock/workspaces.nvim",
+		config = function()
+			require("workspaces").setup({
+				hooks = {
+					open = { "NvimTreeOpen", "Telescope find_files" },
+				},
+			})
+		end,
+	})
 
 	-- Telescope and harpoon for SPEEEED
 	use({
@@ -44,6 +55,9 @@ return require("packer").startup(function(use)
 		requires = {
 			"nvim-telescope/telescope-github.nvim",
 		},
+		config = function()
+			require("telescope").load_extension("workspaces")
+		end,
 	})
 	use("ThePrimeagen/harpoon")
 
@@ -56,6 +70,7 @@ return require("packer").startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp") -- neovim builtin LSP client completion source for nvim-cmp
 	use("L3MON4D3/LuaSnip") -- Snippet engine for neovim
 	use("saadparwaiz1/cmp_luasnip") -- luasnip completion source for nvim-cmp
+	use("ray-x/lsp_signature.nvim")
 
 	use("jose-elias-alvarez/null-ls.nvim") -- Formatting & linting stuff
 
@@ -105,5 +120,23 @@ return require("packer").startup(function(use)
 	})
 
 	-- Floating term | might remove letter dont use it much
-	use({ "akinsho/toggleterm.nvim", tag = "*" })
+	use({ "akinsho/toggleterm.nvim", tag = "*" }) -- Floating term
+	use("AndrewRadev/splitjoin.vim") -- Split oneliner to multiliner
+	use("nvim-treesitter/nvim-treesitter-textobjects") -- Only using @function.inner @function.outer
+	use("rhysd/git-messenger.vim") -- Show commit history for the current line
+
+	-- Useful when focus coding
+	use({
+		"folke/twilight.nvim",
+		config = function()
+			require("twilight").setup({})
+		end,
+	})
+
+	use({
+		"folke/zen-mode.nvim",
+		config = function()
+			require("zen-mode").setup({})
+		end,
+	})
 end)

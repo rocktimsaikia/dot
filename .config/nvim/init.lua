@@ -9,6 +9,7 @@ require("plugins/gitsigns")
 require("plugins/nvim-colorizer")
 require("plugins/lualine")
 require("plugins/toggleterm")
+-- require("plugins.workspaces")
 
 require("plugins/lsp/nvim-lspconfig")
 require("plugins/lsp/null-ls")
