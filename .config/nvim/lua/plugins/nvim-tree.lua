@@ -6,4 +6,7 @@ require("nvim-tree").setup({
 		enable = true,
 		update_root = true,
 	},
+	filters = {
+		custom = { "playground.tsx" },
+	},
 })

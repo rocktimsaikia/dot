@@ -1,7 +1,7 @@
+alias zshrc="source ~/.config/zsh/.zshrc"
 alias dot="vi ~/dotfiles/.config"
 alias al="cat ~/dotfiles/.config/zsh/aliases"
-alias dot="vi ~/dotfiles/.config"
-alias ls="exa"
+alias ls="exa -aF"
 alias cat="bat"
 alias vi="nvim"
 alias fd="fdfind"
@@ -38,21 +38,20 @@ alias grs="git restore --staged"
 alias grm="git rm -r --cached"
 alias gbc="git branch --show-current | pbcopy"
 
+alias gst="git stash push -m"
+alias gstlist="git stash list"
+
+# Github
+alias gprlist="gh pr list -A rocktimsaikia"
+alias gprmerge="gh pr merge"
+alias gprcheck="gh pr checks"
+alias gprcreate="gh pr create"
+alias grview="gh release view"
+
 # Docker
 alias dc="docker-compose"
-
-# Github utils
-alias gplist="gh pr list -A rocktimsaikia"
-alias gmerge="gh pr merge"
-alias gview="gh release view"
-alias gpcheck="gh pr checks"
-
 
 # Codingal
 alias cg="vi ~/main/web"
 alias cgpy="dc exec api manage.py shell_plus"
 alias cgpm="dc exec api manage.py migrate"
-
-# Scripts
-alias cgbuild="~/scripts/cg-build.sh"
-alias cgrelease="~/scripts/cg-release.lua"

@@ -60,10 +60,9 @@ map("i", ";", ";<C-g>u")
 -- nvim-tree
 map("n", "<C-,>", ":NvimTreeFindFileToggle<CR>")
 map("n", "<C-m>", ":NvimTreeFocus<CR>")
+map("n", "<C-c>", ":NvimTreeCollapse<CR>")
 
 -- gitsigns
-map("n", "gbb", ":Gitsigns toggle_current_line_blame<CR>")
-map("n", "gdd", ":Gitsigns diffthis<CR>")
 
 -- telescope
 map("n", "<leader>ff", ':lua require("telescope.builtin").find_files({ hidden=true })<CR>')
@@ -72,15 +71,7 @@ map("n", "<leader>fgg", ':lua require("telescope.builtin").current_buffer_fuzzy_
 map("n", "<leader>fb", ':lua require("telescope.builtin").buffers()<CR>')
 map("n", "<leader>rr", ":Telescope lsp_references<CR>")
 map("n", "<leader>tt", ":Telescope lsp_type_definations<CR>")
--- telescope git
-map("n", "<leader>gs", ':lua require("telescope.builtin").git_status()<CR>')
-map("n", "<leader>gb", ':lua require("telescope.builtin").git_branches()<CR>')
-map("n", "<leader>gc", ':lua require("telescope.builtin").git_commits()<CR>')
-map("n", "<leader>gss", ':lua require("telescope.builtin").git_stash()<CR>')
 -- telescope extensions
-map("n", "<leader>gi", ":Telescope gh issues<CR>")
-map("n", "<leader>gp", ":Telescope gh pull_request author=rocktimsaikia<CR>")
-map("n", "<leader>gr", ":Telescope gh run limit=2<CR>")
 map("n", "<leader>p", ":Telescope workspaces<CR>")
 
 -- harpoon
@@ -100,4 +91,15 @@ map("n", "<leader>wl", ":WorkspacesList<CR>")
 
 map("n", "S", ":SplitjoinSplit<CR>")
 
+map("n", "<leader>gd", ":Gitsigns diffthis<CR>")
 map("n", "<leader>gm", ":GitMessenger<CR>")
+map("n", "<leader>hp", ":Gitsigns preview_hunk<CR>")
+map("n", "<leader>gi", ":Telescope gh issues<CR>")
+map("n", "<leader>gp", ":Telescope gh pull_request author=rocktimsaikia<CR>")
+map("n", "<leader>gr", ":Telescope gh run limit=2<CR>")
+map("n", "<leader>gs", ':lua require("telescope.builtin").git_status()<CR>')
+map("n", "<leader>gb", ':lua require("telescope.builtin").git_branches()<CR>')
+map("n", "<leader>gc", ':lua require("telescope.builtin").git_commits()<CR>')
+map("n", "<leader>gss", ':lua require("telescope.builtin").git_stash()<CR>')
+
+map("n", "<leader>o", ":OrganizeImports<CR>")

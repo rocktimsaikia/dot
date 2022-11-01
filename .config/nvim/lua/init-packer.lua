@@ -49,6 +49,7 @@ return require("packer").startup(function(use)
 	})
 
 	-- Telescope and harpoon for SPEEEED
+	use("ThePrimeagen/harpoon")
 	use({
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
@@ -57,9 +58,9 @@ return require("packer").startup(function(use)
 		},
 		config = function()
 			require("telescope").load_extension("workspaces")
+			require("telescope").load_extension("harpoon")
 		end,
 	})
-	use("ThePrimeagen/harpoon")
 
 	-- Git stuff
 	use("lewis6991/gitsigns.nvim") -- Mostly using for quick diff and blame toggle
@@ -139,4 +140,16 @@ return require("packer").startup(function(use)
 			require("zen-mode").setup({})
 		end,
 	})
+
+	-- Session manager
+	use({
+		"folke/persistence.nvim",
+		event = "BufReadPre", -- this will only start session saving when an actual file was opened
+		module = "persistence",
+		config = function()
+			require("persistence").setup()
+		end,
+	})
+
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 end)

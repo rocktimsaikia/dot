@@ -5,6 +5,7 @@ zstyle :prompt:pure:git:stash show yes
 prompt pure
 
 source "$XDG_CONFIG_HOME/zsh/aliases"
+source "$HOME/scripts/common.sh"
 source "$XDG_CONFIG_HOME/zsh/antigen.zsh"
 
 # bindkey -v
@@ -33,4 +34,3 @@ export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PR
 
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/neovim/bin:$PATH"
-# alias luamake=/luamake
