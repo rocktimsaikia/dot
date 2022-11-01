@@ -1,5 +1,5 @@
 #!/bin/sh
-mkdircd(){
+md(){
   mkdir "$1" && cd "$1" || exit
 }
 

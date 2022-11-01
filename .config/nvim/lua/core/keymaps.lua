@@ -22,6 +22,10 @@ map("i", "jj", "<Esc>")
 -- Clear search highlighting with <leader> and c
 map("n", "<leader>c", ":nohl<CR>")
 
+-- Split remapping
+map("n", ",s", ":vsplit<CR>")
+map("n", ",d", ":split<CR>")
+
 -- Move around splits using Ctrl + {h,j,k,l}
 map("n", "<C-h>", "<C-w>h")
 map("n", "<C-j>", "<C-w>j")
@@ -50,10 +54,13 @@ map("n", "wq", ":call ToggleQuickFix()<CR>")
 map("n", "<leader>b", ":ls<cr>:b<space>")
 
 -- Undo breakpoints
+map("i", "<space>", "<space><C-g>u")
 map("i", ",", ",<C-g>u")
 map("i", ".", ".<C-g>u")
 map("i", ":", ":<C-g>u")
 map("i", ";", ";<C-g>u")
+map("i", "{", "{<C-g>u")
+map("i", "}", "}<C-g>u")
 
 --- PLUGIN KEY MAPPINGS ---
 
@@ -70,13 +77,14 @@ map("n", "<leader>fg", ':lua require("telescope.builtin").live_grep()<CR>')
 map("n", "<leader>fgg", ':lua require("telescope.builtin").current_buffer_fuzzy_find()<CR>')
 map("n", "<leader>fb", ':lua require("telescope.builtin").buffers()<CR>')
 map("n", "<leader>rr", ":Telescope lsp_references<CR>")
-map("n", "<leader>tt", ":Telescope lsp_type_definations<CR>")
+map("n", "<leader>gd", ":Telescope lsp_definations<CR>")
+map("n", "<leader>tt", ":Telescope lsp_type_definitions<CR>")
 -- telescope extensions
 map("n", "<leader>p", ":Telescope workspaces<CR>")
 
 -- harpoon
 map("n", "am", ':lua require("harpoon.mark").add_file()<CR>')
-map("n", "aq", ':lua require("harpoon.ui").toggle_quick_menu()<CR>')
+map("n", "hq", ':lua require("harpoon.ui").toggle_quick_menu()<CR>')
 map("n", "a]", ':lua require("harpoon.ui").nav_next()<CR>')
 map("n", "a[", ':lua require("harpoon.ui").nav_prev()<CR>')
 
@@ -91,7 +99,6 @@ map("n", "<leader>wl", ":WorkspacesList<CR>")
 
 map("n", "S", ":SplitjoinSplit<CR>")
 
-map("n", "<leader>gd", ":Gitsigns diffthis<CR>")
 map("n", "<leader>gm", ":GitMessenger<CR>")
 map("n", "<leader>hp", ":Gitsigns preview_hunk<CR>")
 map("n", "<leader>gi", ":Telescope gh issues<CR>")
@@ -101,5 +108,3 @@ map("n", "<leader>gs", ':lua require("telescope.builtin").git_status()<CR>')
 map("n", "<leader>gb", ':lua require("telescope.builtin").git_branches()<CR>')
 map("n", "<leader>gc", ':lua require("telescope.builtin").git_commits()<CR>')
 map("n", "<leader>gss", ':lua require("telescope.builtin").git_stash()<CR>')
-
-map("n", "<leader>o", ":OrganizeImports<CR>")

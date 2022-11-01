@@ -152,4 +152,13 @@ return require("packer").startup(function(use)
 	})
 
 	use("JoosepAlviste/nvim-ts-context-commentstring")
+
+	use({
+		"nvim-zh/colorful-winsep.nvim",
+		config = function()
+			require("colorful-winsep").setup({
+				no_exec_files = { "NvimTree" },
+			})
+		end,
+	})
 end)

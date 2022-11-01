@@ -26,6 +26,7 @@ opt.iskeyword:append("-")
 
 -- Open vsplit to right
 opt.splitright = true
+opt.splitbelow = true
 
 -- Netrw settings
 -- Hide the dotfiles by default
