@@ -161,4 +161,16 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
+
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	})
+
+	-- CUSTOM stuff
+	use("/home/rocktim/plugins/yo.nvim")
 end)

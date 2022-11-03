@@ -1,9 +1,9 @@
 alias zshrc="source ~/.config/zsh/.zshrc"
-alias dot="vi ~/dotfiles/.config"
+alias dot="nvim ~/dotfiles/.config"
 alias al="cat ~/dotfiles/.config/zsh/aliases"
 alias ls="exa -aF"
 alias cat="bat"
-alias vi="nvim"
+alias v="nvim"
 alias fd="fdfind"
 
 alias pbcopy="xclip -selection clipboard"
@@ -27,6 +27,7 @@ alias gsc="git switch -c"
 alias glg="git log"
 alias gbm="git branch -m"
 alias gbd="git branch -D"
+alias gcp="git cherry-pick"
 
 alias gd="git diff"
 alias gdp="gh pr diff"
@@ -52,6 +53,6 @@ alias grview="gh release view"
 alias dc="docker-compose"
 
 # Codingal
-alias cg="vi ~/main/web"
+alias cg="nvim ~/main/web"
 alias cgpy="dc exec api manage.py shell_plus"
 alias cgpm="dc exec api manage.py migrate"

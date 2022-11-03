@@ -66,6 +66,12 @@ require("lspconfig").tsserver.setup({
 	},
 })
 
+-- Python
+require("lspconfig").pyright.setup({
+	on_attach = on_attach,
+	flags = lsp_flags,
+})
+
 -- Lua LSP setup
 -- The default cmd assumes that the lua-language-server binary can be found in $PATH.
 require("lspconfig").sumneko_lua.setup({
