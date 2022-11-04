@@ -54,13 +54,10 @@ map("n", "wq", ":call ToggleQuickFix()<CR>")
 map("n", "<leader>b", ":ls<cr>:b<space>")
 
 -- Undo breakpoints
-map("i", "<space>", "<space><C-g>u")
 map("i", ",", ",<C-g>u")
 map("i", ".", ".<C-g>u")
 map("i", ":", ":<C-g>u")
 map("i", ";", ";<C-g>u")
-map("i", "{", "{<C-g>u")
-map("i", "}", "}<C-g>u")
 
 --- PLUGIN KEY MAPPINGS ---
 
@@ -72,6 +69,7 @@ map("n", "<C-c>", ":NvimTreeCollapse<CR>")
 -- gitsigns
 
 -- telescope
+map("n", "<leader>h", ":Telescope help_tags<CR>")
 map("n", "<leader>ff", ':lua require("telescope.builtin").find_files({ hidden=true })<CR>')
 map("n", "<leader>fg", ':lua require("telescope.builtin").live_grep()<CR>')
 map("n", "<leader>fgg", ':lua require("telescope.builtin").current_buffer_fuzzy_find()<CR>')

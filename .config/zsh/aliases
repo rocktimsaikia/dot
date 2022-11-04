@@ -43,11 +43,11 @@ alias gst="git stash push -m"
 alias gstlist="git stash list"
 
 # Github
-alias gprlist="gh pr list -A rocktimsaikia"
-alias gprmerge="gh pr merge"
-alias gprcheck="gh pr checks"
-alias gprcreate="gh pr create"
-alias grview="gh release view"
+alias glist="gh pr list -A rocktimsaikia"
+alias gmerge="gh pr merge"
+alias gcheck="gh pr checks"
+alias gcreate="gh pr create --assignee @me"
+alias gview="gh release view"
 
 # Docker
 alias dc="docker-compose"

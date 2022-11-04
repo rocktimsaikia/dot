@@ -22,9 +22,16 @@ cgcommit(){
 }
 
 cgrelease(){
-  TAG="$(git describe --tags --abbrev=0 | tr -d -c 0-9)"
-  CMD="gh release create v$((TAG + 1)) --generate-notes"
-  echo "$CMD"
-  OUTPUT=$(eval "$CMD")
-  echo "$OUTPUT"
+  release_tag="$(git describe --tags --abbrev=0 | tr -d -c 0-9)"
+  cmd="gh release create v$((release_tag + 1)) --generate-notes"
+  echo "$cmd" && eval "$cmd"
+}
+
+gopen(){
+  pr_number="$(gh pr view --json number | jq '.[]')"
+  if [ -n "$pr_number" ]; then
+    gh browse "$pr_number"
+  else
+    gh browse
+  fi
 }
