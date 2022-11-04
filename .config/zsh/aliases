@@ -56,3 +56,5 @@ alias dc="docker-compose"
 alias cg="nvim ~/main/web"
 alias cgpy="dc exec api manage.py shell_plus"
 alias cgpm="dc exec api manage.py migrate"
+
+alias camb="~/cambridge-cli/cli.py"

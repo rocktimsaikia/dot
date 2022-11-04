@@ -106,3 +106,6 @@ map("n", "<leader>gs", ':lua require("telescope.builtin").git_status()<CR>')
 map("n", "<leader>gb", ':lua require("telescope.builtin").git_branches()<CR>')
 map("n", "<leader>gc", ':lua require("telescope.builtin").git_commits()<CR>')
 map("n", "<leader>gss", ':lua require("telescope.builtin").git_stash()<CR>')
+
+-- Plannery mapping for running tests
+map("n", "<leader>t", "<Plug>PlenaryTestFile")
