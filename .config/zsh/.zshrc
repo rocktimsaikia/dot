@@ -1,11 +1,14 @@
 # init prompt and pick pure
+# TODO: use a custom zsh prompt
 fpath+="$XDG_CONFIG_HOME/zsh/plugins/pure"
 autoload -U promptinit; promptinit
 zstyle :prompt:pure:git:stash show yes
 prompt pure
 
-source "$XDG_CONFIG_HOME/zsh/aliases"
-source "$HOME/scripts/common.sh"
+source "$XDG_CONFIG_HOME/aliasrc"
+source "$HOME/functions/codingal"
+
+# Loading package manager
 source "$XDG_CONFIG_HOME/zsh/antigen.zsh"
 
 # bindkey -v
@@ -33,5 +36,8 @@ antigen apply
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 
 export LANG='en_US.UTF-8'
+
+# bins
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/scripts:$PATH"
 export PATH="$HOME/neovim/bin:$PATH"

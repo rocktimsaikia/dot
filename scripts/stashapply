@@ -1,0 +1,3 @@
+#!/bin/sh
+
+git stash apply "$(git stash list | grep "$1" | cut -d : -f 1)"

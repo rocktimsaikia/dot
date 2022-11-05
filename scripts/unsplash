@@ -1,0 +1,4 @@
+#!/bin/sh
+
+img_url="$(curl https://source.unsplash.com/random --stderr - | grep -oP 'href="\K[^"]+')"
+curl "$img_url" -o random_unsplash_img.jpeg
