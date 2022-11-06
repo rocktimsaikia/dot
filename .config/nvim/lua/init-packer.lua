@@ -15,13 +15,18 @@ return require("packer").startup(function(use)
 	use("tpope/vim-surround")
 	use("tpope/vim-commentary") -- Commenting made easy
 	use("tpope/vim-unimpaired") -- Using for only :cnext and :cprevious
-	use("tpope/vim-fugitive") -- Git wrapper. Mostly using for commits and puhsing stuff
 
 	use("nvim-lua/plenary.nvim")
 	use("wellle/targets.vim") -- provides additional text objects
 	use("nvim-lualine/lualine.nvim")
-	use("norcalli/nvim-colorizer.lua")
 	use("jiangmiao/auto-pairs")
+
+	use({
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup()
+		end,
+	})
 
 	-- Color schemes
 	use({
@@ -35,19 +40,6 @@ return require("packer").startup(function(use)
 	-- use({ "ellisonleao/gruvbox.nvim", config = function() vim.cmd("colorscheme gruvbox") end, })
 	-- use({ "rose-pine/neovim", as = "rose-pine", config = function() vim.cmd("colorscheme rose-pine") end, })
 
-	-- Project/workspace management
-	-- use({ "ahmedkhalf/project.nvim", config = function() require("project_nvim").setup({}) end, })
-	use({
-		"natecraddock/workspaces.nvim",
-		config = function()
-			require("workspaces").setup({
-				hooks = {
-					open = { "NvimTreeOpen", "Telescope find_files" },
-				},
-			})
-		end,
-	})
-
 	-- Telescope and harpoon for SPEEEED
 	use("ThePrimeagen/harpoon")
 	use({
@@ -57,7 +49,6 @@ return require("packer").startup(function(use)
 			"nvim-telescope/telescope-github.nvim",
 		},
 		config = function()
-			require("telescope").load_extension("workspaces")
 			require("telescope").load_extension("harpoon")
 		end,
 	})
@@ -71,8 +62,7 @@ return require("packer").startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp") -- neovim builtin LSP client completion source for nvim-cmp
 	use("L3MON4D3/LuaSnip") -- Snippet engine for neovim
 	use("saadparwaiz1/cmp_luasnip") -- luasnip completion source for nvim-cmp
-	use("ray-x/lsp_signature.nvim")
-
+	use("ray-x/lsp_signature.nvim") -- LSP signature hint as you type
 	use("jose-elias-alvarez/null-ls.nvim") -- Formatting & linting stuff
 
 	use({
@@ -121,7 +111,6 @@ return require("packer").startup(function(use)
 	})
 
 	-- Floating term | might remove letter dont use it much
-	use({ "akinsho/toggleterm.nvim", tag = "*" }) -- Floating term
 	use("AndrewRadev/splitjoin.vim") -- Split oneliner to multiliner
 	use("nvim-treesitter/nvim-treesitter-textobjects") -- Only using @function.inner @function.outer
 	use("rhysd/git-messenger.vim") -- Show commit history for the current line
@@ -141,26 +130,16 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	-- Session manager
-	use({
-		"folke/persistence.nvim",
-		event = "BufReadPre", -- this will only start session saving when an actual file was opened
-		module = "persistence",
-		config = function()
-			require("persistence").setup()
-		end,
-	})
-
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
-	use({
-		"nvim-zh/colorful-winsep.nvim",
-		config = function()
-			require("colorful-winsep").setup({
-				no_exec_files = { "NvimTree" },
-			})
-		end,
-	})
+	-- use({
+	-- 	"nvim-zh/colorful-winsep.nvim",
+	-- 	config = function()
+	-- 		require("colorful-winsep").setup({
+	-- 			no_exec_files = { "NvimTree" },
+	-- 		})
+	-- 	end,
+	-- })
 
 	use({
 		"iamcco/markdown-preview.nvim",
@@ -172,5 +151,6 @@ return require("packer").startup(function(use)
 	})
 
 	-- CUSTOM stuff
-	use("/home/rocktim/plugins/yo.nvim")
+	-- use("/home/rocktim/plugins/yo.nvim")
+	use("/home/rocktim/plugins/wincolor.nvim")
 end)

@@ -1,6 +1,8 @@
 local g = vim.g
 local opt = vim.opt
 
+opt.ttimeoutlen = -1
+
 -- disable netrw at the very start of your init.lua (strongly advised)
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1

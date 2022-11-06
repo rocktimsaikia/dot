@@ -38,20 +38,17 @@ map("n", "<leader>r", ":so %<CR>")
 -- Fast saving with <leader> and s
 map("n", "<leader>s", ":w<CR>")
 
--- Quickfix list
-vim.cmd([[
-function! ToggleQuickFix()
-    if empty(filter(getwininfo(), 'v:val.quickfix'))
-        copen
-    else
-        cclose
-    endif
-endfunction
-]])
-map("n", "wq", ":call ToggleQuickFix()<CR>")
-
--- Open buffers
-map("n", "<leader>b", ":ls<cr>:b<space>")
+-- -- Quickfix list
+-- vim.cmd([[
+-- function! ToggleQuickFix()
+--     if empty(filter(getwininfo(), 'v:val.quickfix'))
+--         copen
+--     else
+--         cclose
+--     endif
+-- endfunction
+-- ]])
+-- map("n", "wq", ":call ToggleQuickFix()<CR>")
 
 -- Undo breakpoints
 map("i", ",", ",<C-g>u")
@@ -81,19 +78,12 @@ map("n", "<leader>tt", ":Telescope lsp_type_definitions<CR>")
 map("n", "<leader>p", ":Telescope workspaces<CR>")
 
 -- harpoon
-map("n", "am", ':lua require("harpoon.mark").add_file()<CR>')
-map("n", "hq", ':lua require("harpoon.ui").toggle_quick_menu()<CR>')
-map("n", "a]", ':lua require("harpoon.ui").nav_next()<CR>')
-map("n", "a[", ':lua require("harpoon.ui").nav_prev()<CR>')
-
--- fugitive
-map("n", "gaa", ":Git add .")
+map("n", "<leader>a", ':lua require("harpoon.mark").add_file()<CR>')
+map("n", "<leader>]", ':lua require("harpoon.ui").nav_next()<CR>')
+map("n", "<leader>[", ':lua require("harpoon.ui").nav_prev()<CR>')
 
 -- neogeon | create functio annotations
 map("n", "<leader>nf", ":lua require('neogen').generate()<CR>")
-
--- workspaces
-map("n", "<leader>wl", ":WorkspacesList<CR>")
 
 map("n", "S", ":SplitjoinSplit<CR>")
 
