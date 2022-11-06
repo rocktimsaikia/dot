@@ -15,6 +15,7 @@ return require("packer").startup(function(use)
 	use("tpope/vim-surround")
 	use("tpope/vim-commentary") -- Commenting made easy
 	use("tpope/vim-unimpaired") -- Using for only :cnext and :cprevious
+	use("tpope/vim-capslock")
 
 	use("nvim-lua/plenary.nvim")
 	use("wellle/targets.vim") -- provides additional text objects

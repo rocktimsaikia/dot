@@ -1,4 +1,6 @@
 #!/bin/sh
 
+# This is more like a one-off script I created just to test different compression libs on images
+# so there is no use of this one.
 img_url="$(curl https://source.unsplash.com/random --stderr - | grep -oP 'href="\K[^"]+')"
 curl "$img_url" -o random_unsplash_img.jpeg

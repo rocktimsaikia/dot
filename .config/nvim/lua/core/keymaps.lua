@@ -7,7 +7,6 @@ local function map(mode, lhs, rhs, opts)
 end
 
 --- GENERAL MAPPINGS ---
-
 vim.g.mapleader = " "
 
 -- Disable arrow keys

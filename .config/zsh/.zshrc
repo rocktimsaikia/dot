@@ -1,9 +1,14 @@
-# init prompt and pick pure
-# TODO: use a custom zsh prompt
-fpath+="$XDG_CONFIG_HOME/zsh/plugins/pure"
-autoload -U promptinit; promptinit
-zstyle :prompt:pure:git:stash show yes
-prompt pure
+# This needs to be enabled inorder to use vcs_info_msg_0_
+setopt PROMPT_SUBST
+
+# Preload and enable vsc_info and stores data to vcs_info_msg_0_
+autoload -Uz vcs_info
+precmd () { vcs_info }
+zstyle ':vcs_info:*' formats ' %s(%F{red}%b%f)'
+
+# https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
+PS1='%F{#a89984}%n@%m%f %F{red}%~%f$vcs_info_msg_0_ $ '
+# #504945, #665c54, #a89984
 
 source "$XDG_CONFIG_HOME/aliasrc"
 source "$HOME/functions/codingal"
