@@ -32,6 +32,7 @@ alias gcp="git cherry-pick"
 alias gcl="git clone"
 
 alias gd="git diff"
+alias gdh="git diff HEAD"
 alias gdp="gh pr diff"
 alias gdf="git diff --name-only"
 alias gdw="gh pr diff --web"
@@ -64,6 +65,7 @@ alias dc="docker-compose"
 alias cg="nvim ~/main/web"
 alias cgpy="dc exec api manage.py shell_plus"
 alias cgpm="dc exec api manage.py migrate"
+alias cgi="cd ~/main/web/public/images"
 
 alias camb="~/cambridge-cli/cli.py"
 
@@ -71,9 +73,9 @@ alias camb="~/cambridge-cli/cli.py"
 
 ## Files
 alias eA="nvim ~/.config/aliasrc"
-alias eZ="nvim ~/.config/zsh/.zshrc"
-alias eV='nvim ~/.config/nvim'
-alias eK="nvim ~/.config/kitty/kitty.conf"
+alias eZ="nvim ~/dotfiles/.config/zsh/.zshrc"
+alias eV='nvim ~/dotfiles/.config/nvim'
+alias eK="nvim ~/dotfiles/.config/kitty/kitty.conf"
 alias eD='nvim ~/dotfiles'
 
 ## Directories

@@ -1,7 +1,7 @@
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		theme = "gruvbox-material",
+		theme = "catppuccin",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
@@ -20,10 +20,8 @@ require("lualine").setup({
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = { "branch", "diagnostics" },
-		-- lualine_b = { "branch", "diff", "diagnostics" },
 		lualine_c = { { "filename", path = 1 } },
 		lualine_x = { "filetype", "%L" }, -- Total line numbers
-		-- lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_y = {},
 		lualine_z = {},
 	},

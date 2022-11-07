@@ -4,10 +4,10 @@ setopt PROMPT_SUBST
 # Preload and enable vsc_info and stores data to vcs_info_msg_0_
 autoload -Uz vcs_info
 precmd () { vcs_info }
-zstyle ':vcs_info:*' formats ' %s(%F{red}%b%f)'
+zstyle ':vcs_info:*' formats ' %F{#4d4d51}(%b)%f'
 
 # https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
-PS1='%F{#a89984}%n@%m%f %F{red}%~%f$vcs_info_msg_0_ $ '
+PS1=' %F{#a89984}🐼%f %F{#f5a97f}%~%f$vcs_info_msg_0_ '
 # #504945, #665c54, #a89984
 
 source "$XDG_CONFIG_HOME/aliasrc"
@@ -46,3 +46,4 @@ export LANG='en_US.UTF-8'
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/scripts:$PATH"
 export PATH="$HOME/neovim/bin:$PATH"
+export PATH="$PATH:/usr/local/go/bin"

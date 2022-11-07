@@ -31,13 +31,20 @@ return require("packer").startup(function(use)
 
 	-- Color schemes
 	use({
-		"sainnhe/gruvbox-material",
+		"catppuccin/nvim",
+		as = "catppuccin",
 		config = function()
-			vim.g.gruvbox_material_background = "hard"
-			vim.g.gruvbox_material_better_performance = 1
-			vim.cmd("colorscheme gruvbox-material")
+			vim.cmd("colorscheme catppuccin-mocha")
 		end,
 	})
+	-- use({
+	-- 	"sainnhe/gruvbox-material",
+	-- 	config = function()
+	-- 		vim.g.gruvbox_material_background = "hard"
+	-- 		vim.g.gruvbox_material_better_performance = 1
+	-- 		vim.cmd("colorscheme gruvbox-material")
+	-- 	end,
+	-- })
 	-- use({ "ellisonleao/gruvbox.nvim", config = function() vim.cmd("colorscheme gruvbox") end, })
 	-- use({ "rose-pine/neovim", as = "rose-pine", config = function() vim.cmd("colorscheme rose-pine") end, })
 
@@ -133,15 +140,6 @@ return require("packer").startup(function(use)
 
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
-	-- use({
-	-- 	"nvim-zh/colorful-winsep.nvim",
-	-- 	config = function()
-	-- 		require("colorful-winsep").setup({
-	-- 			no_exec_files = { "NvimTree" },
-	-- 		})
-	-- 	end,
-	-- })
-
 	use({
 		"iamcco/markdown-preview.nvim",
 		run = "cd app && npm install",
@@ -151,7 +149,36 @@ return require("packer").startup(function(use)
 		ft = { "markdown" },
 	})
 
-	-- CUSTOM stuff
-	-- use("/home/rocktim/plugins/yo.nvim")
-	use("/home/rocktim/plugins/wincolor.nvim")
+	use({
+		"nvim-zh/colorful-winsep.nvim",
+		config = function()
+			require("colorful-winsep").setup({
+				create_event = function()
+					if vim.fn.winnr("$") == 3 then
+						local win_id = vim.fn.win_getid(vim.fn.winnr("h"))
+						local filetype = vim.api.nvim_buf_get_option(vim.api.nvim_win_get_buf(win_id), "filetype")
+						if filetype == "NvimTree" then
+							require("colorful-winsep").NvimSeparatorDel()
+						end
+					end
+				end,
+			})
+		end,
+	})
+
+	use({
+		"lukas-reineke/indent-blankline.nvim",
+		config = function()
+			require("indent_blankline").setup({
+				show_end_of_line = true,
+			})
+		end,
+	})
+
+	use({
+		"karb94/neoscroll.nvim",
+		config = function()
+			require("neoscroll").setup()
+		end,
+	})
 end)

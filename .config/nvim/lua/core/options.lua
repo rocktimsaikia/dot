@@ -13,8 +13,7 @@ opt.relativenumber = true
 opt.shiftwidth = 2
 opt.scrolloff = 8
 opt.termguicolors = true
--- opt.background = "dark"
-
+opt.background = "dark"
 -- Search settings
 opt.ignorecase = true
 opt.smartcase = true
@@ -39,5 +38,5 @@ opt.hidden = true
 g.git_messenger_floating_win_opts = { border = "rounded" }
 g.git_messenger_popup_content_margins = false
 
--- Custom winbar
-opt.winbar = "%=🐼%m%f"
+opt.list = true
+-- opt.listchars:append("eol:↴")
