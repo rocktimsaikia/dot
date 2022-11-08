@@ -9,6 +9,9 @@ end
 --- GENERAL MAPPINGS ---
 vim.g.mapleader = " "
 
+-- Clipboard
+map("n", "<leader>y", "\"+y")
+
 -- Disable arrow keys
 map("", "<up>", "<nop>")
 map("", "<down>", "<nop>")
