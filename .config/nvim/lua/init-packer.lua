@@ -70,7 +70,6 @@ return require("packer").startup(function(use)
     use("hrsh7th/cmp-nvim-lsp") -- neovim builtin LSP client completion source for nvim-cmp
     use("L3MON4D3/LuaSnip") -- Snippet engine for neovim
     use("saadparwaiz1/cmp_luasnip") -- luasnip completion source for nvim-cmp
-    use("ray-x/lsp_signature.nvim") -- LSP signature hint as you type
     use("jose-elias-alvarez/null-ls.nvim") -- Formatting & linting stuff
 
     use({
@@ -181,4 +180,31 @@ return require("packer").startup(function(use)
             require("neoscroll").setup()
         end,
     })
+
+    use({
+        "nvim-neorg/neorg",
+        ft = "norg",
+        after = "nvim-treesitter",
+        config = function()
+            require("neorg").setup({
+                load = {
+                    ["core.defaults"] = {},
+                },
+            })
+        end,
+    })
+
+    use({
+        "chentoast/marks.nvim",
+        config = function()
+            require("marks").setup({})
+        end,
+    })
+
+    -- use({
+    --   "/home/rocktim/plugins/wincolor.nvim",
+    --   config = function ()
+    --   	require('wincolor').setup()
+    --   end
+    -- })
 end)

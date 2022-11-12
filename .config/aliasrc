@@ -31,6 +31,13 @@ alias gbd="git branch -D"
 alias gcp="git cherry-pick"
 alias gcl="git clone"
 
+
+alias gc="git commit -m"
+alias gce="git commit -e"
+alias gca="git commit --amend -m"
+alias gcae="git commit --amend -e"
+alias gcan="git commit --amend --no-edit"
+
 alias gd="git diff"
 alias gdh="git diff HEAD"
 alias gdp="gh pr diff"
@@ -51,6 +58,7 @@ alias gmerge="gh pr merge"
 alias gcheck="gh pr checks"
 alias gcreate="gh pr create --assignee @me"
 alias gview="gh release view"
+alias gis="gh issue list"
 
 # NPM
 alias nI="npm install -g"
@@ -62,12 +70,10 @@ alias nL="npm ls -g"
 alias dc="docker-compose"
 
 # Codingal
-alias cg="nvim ~/main/web"
+alias cg="cd ~/main/web && v ."
 alias cgpy="dc exec api manage.py shell_plus"
 alias cgpm="dc exec api manage.py migrate"
 alias cgi="cd ~/main/web/public/images"
-
-alias camb="~/cambridge-cli/cli.py"
 
 # Shortcutts
 
