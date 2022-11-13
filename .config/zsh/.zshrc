@@ -7,7 +7,7 @@ precmd () { vcs_info }
 zstyle ':vcs_info:*' formats ' %F{#4d4d51}(%b)%f'
 
 # https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
-PS1=' %F{#f5a97f}%~%f$vcs_info_msg_0_ '
+PS1=' 󰊠 %F{#f5a97f}%~%f$vcs_info_msg_0_ '
 # #504945, #665c54, #a89984
 
 source "$XDG_CONFIG_HOME/aliasrc"
