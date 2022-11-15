@@ -182,29 +182,9 @@ return require("packer").startup(function(use)
     })
 
     use({
-        "nvim-neorg/neorg",
-        ft = "norg",
-        after = "nvim-treesitter",
-        config = function()
-            require("neorg").setup({
-                load = {
-                    ["core.defaults"] = {},
-                },
-            })
-        end,
-    })
-
-    use({
         "chentoast/marks.nvim",
         config = function()
             require("marks").setup({})
         end,
     })
-
-    -- use({
-    --   "/home/rocktim/plugins/wincolor.nvim",
-    --   config = function ()
-    --   	require('wincolor').setup()
-    --   end
-    -- })
 end)
