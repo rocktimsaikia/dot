@@ -1,3 +1,7 @@
+# Custom functions
+fpath+=$HOME/.config/zsh/.zfunc
+autoload -Uz cgbuild cgcommit cgrelease
+
 # This needs to be enabled inorder to use vcs_info_msg_0_
 setopt PROMPT_SUBST
 
@@ -11,7 +15,6 @@ PS1='%F{red}% 󰊠 %f%S%F{#313244} %K{#f4a97f}%~%k %f%s$vcs_info_msg_0_ '
 # #504945, #665c54, #a89984
 
 source "$XDG_CONFIG_HOME/aliasrc"
-source "$HOME/functions/codingal"
 
 # Loading package manager
 source "$XDG_CONFIG_HOME/zsh/antigen.zsh"

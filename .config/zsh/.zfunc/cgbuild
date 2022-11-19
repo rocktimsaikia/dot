@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+cd ~/main/web \
+&& stashapply "prod-build" \
+&& sudo rm -rf .next \
+&& yarn build \
+&& docker-compose down \
+&& docker-compose up

@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+git commit -m "$(git branch --show-current | cut -d - -f 1,2): $1"
