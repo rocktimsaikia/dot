@@ -30,21 +30,21 @@ return require("packer").startup(function(use)
     })
 
     -- Color schemes
+    -- use({
+    --     "catppuccin/nvim",
+    --     as = "catppuccin",
+    --     config = function()
+    --         vim.cmd("colorscheme catppuccin")
+    --     end,
+    -- })
     use({
-        "catppuccin/nvim",
-        as = "catppuccin",
+        "sainnhe/gruvbox-material",
         config = function()
-            vim.cmd("colorscheme catppuccin")
+            vim.g.gruvbox_material_background = "hard"
+            vim.g.gruvbox_material_better_performance = 1
+            vim.cmd("colorscheme gruvbox-material")
         end,
     })
-    -- use({
-    -- 	"sainnhe/gruvbox-material",
-    -- 	config = function()
-    -- 		vim.g.gruvbox_material_background = "hard"
-    -- 		vim.g.gruvbox_material_better_performance = 1
-    -- 		vim.cmd("colorscheme gruvbox-material")
-    -- 	end,
-    -- })
     -- use({ "ellisonleao/gruvbox.nvim", config = function() vim.cmd("colorscheme gruvbox") end, })
     -- use({ "rose-pine/neovim", as = "rose-pine", config = function() vim.cmd("colorscheme rose-pine") end, })
 

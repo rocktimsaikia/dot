@@ -48,8 +48,8 @@ export PATH="$HOME/scripts:$PATH"
 export PATH="$HOME/neovim/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 
+# bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
 # bun completions
 [ -s "/home/rocktim/.bun/_bun" ] && source "/home/rocktim/.bun/_bun"

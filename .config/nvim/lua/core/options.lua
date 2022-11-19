@@ -13,7 +13,7 @@ opt.relativenumber = true
 opt.shiftwidth = 2
 opt.scrolloff = 8
 opt.termguicolors = true
-opt.background = "dark"
+-- opt.background = "transparent"
 -- Search settings
 opt.ignorecase = true
 opt.smartcase = true

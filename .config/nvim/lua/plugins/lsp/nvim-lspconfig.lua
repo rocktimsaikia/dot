@@ -27,7 +27,6 @@ local on_attach = function(client, bufnr)
     vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, bufopts)
     -- vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, bufopts)
     -- vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
-    vim.keymap.set("n", "<space>o", "call OrganizeImports()", bufopts)
     -- vim.keymap.set("n", "<space>f", function()
     -- 	vim.lsp.buf.format({ async = true })
     -- end, bufopts)
@@ -95,3 +94,10 @@ require("lspconfig").sumneko_lua.setup({
 
 -- Bash LSP setup
 require("lspconfig").bashls.setup({})
+
+require("lspconfig").gopls.setup({
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+    root_dir = require("lspconfig/util").root_pattern("go.work", "go.mod", ".git"),
+})
