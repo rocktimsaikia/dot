@@ -117,7 +117,6 @@ return require("packer").startup(function(use)
         end,
     })
 
-    -- Floating term | might remove letter dont use it much
     use("AndrewRadev/splitjoin.vim") -- Split oneliner to multiliner
     use("nvim-treesitter/nvim-treesitter-textobjects") -- Only using @function.inner @function.outer
     use("rhysd/git-messenger.vim") -- Show commit history for the current line

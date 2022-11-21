@@ -39,6 +39,7 @@ map("n", "<leader>r", ":so %<CR>")
 
 -- Fast saving with <leader> and s
 map("n", "<leader>s", ":w<CR>")
+map("n", "<leader>qa", ":qa<CR>")
 
 -- -- Quickfix list
 -- vim.cmd([[
@@ -78,6 +79,7 @@ map("n", "<leader>gd", ":Telescope lsp_definations<CR>")
 map("n", "<leader>tt", ":Telescope lsp_type_definitions<CR>")
 -- telescope extensions
 map("n", "<leader>p", ":Telescope workspaces<CR>")
+map("n", "<leader>gs", ':lua require("telescope.builtin").git_status()<CR>')
 
 -- harpoon
 map("n", "<leader>a", ':lua require("harpoon.mark").add_file()<CR>')
@@ -88,16 +90,6 @@ map("n", "<leader>[", ':lua require("harpoon.ui").nav_prev()<CR>')
 map("n", "<leader>nf", ":lua require('neogen').generate()<CR>")
 
 map("n", "S", ":SplitjoinSplit<CR>")
-
-map("n", "<leader>gm", ":GitMessenger<CR>")
-map("n", "<leader>hp", ":Gitsigns preview_hunk<CR>")
-map("n", "<leader>gi", ":Telescope gh issues<CR>")
-map("n", "<leader>gp", ":Telescope gh pull_request author=rocktimsaikia<CR>")
-map("n", "<leader>gr", ":Telescope gh run limit=2<CR>")
-map("n", "<leader>gs", ':lua require("telescope.builtin").git_status()<CR>')
-map("n", "<leader>gb", ':lua require("telescope.builtin").git_branches()<CR>')
-map("n", "<leader>gc", ':lua require("telescope.builtin").git_commits()<CR>')
-map("n", "<leader>gss", ':lua require("telescope.builtin").git_stash()<CR>')
 
 -- Plannery mapping for running tests
 map("n", "<leader>t", "<Plug>PlenaryTestFile")

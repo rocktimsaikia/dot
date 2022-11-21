@@ -1,0 +1,24 @@
+#!/usr/bin/bash
+username=$(echo "$1" | awk -F/ '{print $4}')
+reponame=$(echo "$1" | awk -F/ '{print $5}')
+has_rest=$(echo "$1" | awk -F/ '{print $6}')
+last_path=$(echo "$1" | awk -F/ '{print $NF}')
+dest_dir=$last_path
+src_name=''
+
+# 1.Use the last url path as destination dir if not provided specifically
+# 2.If only the repo path is provided; download all repo contents
+if [[ "$2" ]]; then dest_dir=$2; fi
+if [[ $has_rest ]]; then src_name=$last_path; fi
+
+if [[ -z $rest ]]; then
+  res=$(curl -sH "Accept: application/vnd.github+json" https://api.github.com/repos/"$username"/"$reponame"/contents/"$src_name" | jq '.[] .download_url')
+  readarray -t arr <<< "$res"
+  if [[ ${#arr[@]} -gt 0 ]]; then
+    for url in "${arr[@]}"; do
+      url=$(echo "$url" | tr -d '"')
+      wget -q --show-progress -P "$dest_dir" "$url"
+    done
+  fi
+fi
+exit

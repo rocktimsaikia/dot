@@ -99,5 +99,5 @@ require("lspconfig").gopls.setup({
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
-    root_dir = require("lspconfig/util").root_pattern("go.work", "go.mod", ".git"),
+    cmd = { "/home/rocktim/go/bin/gopls" },
 })
