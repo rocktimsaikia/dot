@@ -11,6 +11,7 @@ vim.g.mapleader = " "
 
 -- Clipboard
 map("v", "<leader>y", '"+y')
+map("n", "<leader>wy", 'viw"+y')
 
 -- Disable arrow keys
 map("", "<up>", "<nop>")

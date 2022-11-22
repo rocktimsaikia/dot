@@ -49,6 +49,7 @@ export LANG='en_US.UTF-8'
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/scripts:$PATH"
 export PATH="$HOME/neovim/bin:$PATH"
+export PATH="$HOME/.config/rofi/scripts:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 
 # bun
