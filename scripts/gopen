@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/usr/bin/env bash
 pr_number="$(gh pr view --json number | jq '.[]')"
 if [ -n "$pr_number" ]; then
-  gh browse "$pr_number"
+  gh browse "$pr_number" 2> /dev/null
 else
-  gh browse
+  gh browse 2> /dev/null
 fi

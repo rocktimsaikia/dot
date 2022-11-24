@@ -1,8 +1,0 @@
-#!/bin/sh
-
-directory="$HOME/notes"
-filename="$(date +"%Y-%m-%d_%r").norg"
-if [ ! -d "$directory" ]; then
-  mkdir "$directory"
-fi
-nvim "$directory/$filename"

@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-branches=("$(git reflog | grep "moving from" | cut -d " " -f 8 | grep -v "master")")
-echo "$branches"
