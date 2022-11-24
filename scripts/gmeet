@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+brave-browser https://meet.google.com/new 2> /dev/null

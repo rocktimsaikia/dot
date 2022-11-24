@@ -16,4 +16,5 @@ configuration{
 
 //@theme "catppuccin-mocha"
 
-@theme "~/.config/rofi/themes/gruvbox/gruvbox-dark-soft.rasi"
+//@theme "~/.config/rofi/themes/gruvbox/gruvbox-dark-soft.rasi"
+@theme "/usr/share/rofi/themes/android_notification.rasi"
