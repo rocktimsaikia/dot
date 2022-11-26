@@ -52,6 +52,10 @@ export PATH="$HOME/neovim/bin:$PATH"
 export PATH="$HOME/.config/rofi/scripts:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
 
+# To stop ranger from loading both the default and your custom rc.conf,
+# please set the environment variable RANGER_LOAD_DEFAULT_RC to FALSE.
+export RANGER_LOAD_DEFAULT_RC=false
+
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
