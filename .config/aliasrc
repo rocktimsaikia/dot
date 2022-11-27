@@ -7,6 +7,7 @@ alias aremove="sudo apt-get --purge autoremove"
 
 alias zshrc="source ~/.config/zsh/.zshrc"
 alias ls="exa -aF"
+alias lsr="ranger"
 alias cat="bat"
 alias v="nvim"
 alias fd="fdfind"
