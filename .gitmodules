@@ -1,3 +1,3 @@
-[submodule ".config/zsh/plugins/pure"]
-	path = .config/zsh/plugins/pure
-	url = git@github.com:sindresorhus/pure.git
+[submodule ".config/ranger/plugings/ranger_devicons"]
+	path = .config/ranger/plugings/ranger_devicons
+	url = https://github.com/alexanderjeurissen/ranger_devicons
