@@ -16,6 +16,7 @@ return require("packer").startup(function(use)
     use("tpope/vim-commentary") -- Commenting made easy
     use("tpope/vim-unimpaired") -- Using for only :cnext and :cprevious
     use("tpope/vim-capslock")
+    use("tpope/vim-obsession")
 
     use("nvim-lua/plenary.nvim")
     use("wellle/targets.vim") -- provides additional text objects
@@ -29,14 +30,6 @@ return require("packer").startup(function(use)
         end,
     })
 
-    -- Color schemes
-    -- use({
-    --     "catppuccin/nvim",
-    --     as = "catppuccin",
-    --     config = function()
-    --         vim.cmd("colorscheme catppuccin")
-    --     end,
-    -- })
     use({
         "sainnhe/gruvbox-material",
         config = function()
@@ -45,10 +38,8 @@ return require("packer").startup(function(use)
             vim.cmd("colorscheme gruvbox-material")
         end,
     })
-    -- use({ "ellisonleao/gruvbox.nvim", config = function() vim.cmd("colorscheme gruvbox") end, })
-    -- use({ "rose-pine/neovim", as = "rose-pine", config = function() vim.cmd("colorscheme rose-pine") end, })
 
-    -- Telescope and harpoon for SPEEEED
+    -- Telescope and harpoon
     use("ThePrimeagen/harpoon")
     use({
         "nvim-telescope/telescope.nvim",

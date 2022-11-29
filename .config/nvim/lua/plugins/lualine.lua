@@ -23,7 +23,11 @@ require("lualine").setup({
         lualine_c = { { "filename", path = 1 } },
         lualine_x = { "filetype", "%L" }, -- Total line numbers
         lualine_y = {},
-        lualine_z = {},
+        lualine_z = {
+            function()
+                return vim.fn.ObsessionStatus("Ob", "X")
+            end,
+        },
     },
     inactive_sections = {
         lualine_a = {},
