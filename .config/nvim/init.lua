@@ -6,7 +6,6 @@ require("core.keymaps")
 
 require("plugins.nvim-treesitter")
 require("plugins.nvim-tree")
-require("plugins.gitsigns")
 require("plugins.lualine")
 
 require("plugins.lsp.nvim-lspconfig")

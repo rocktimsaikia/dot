@@ -4,6 +4,7 @@ alias ainstall="sudo apt install"
 alias aupdate="sudo apt update"
 alias aupgrade="sudo apt upgrade"
 alias aremove="sudo apt-get --purge autoremove"
+alias alist="sudo apt list --upgradable"
 
 alias zshrc="source ~/.config/zsh/.zshrc"
 alias ls="exa -aF"

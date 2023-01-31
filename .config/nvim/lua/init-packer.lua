@@ -53,7 +53,7 @@ return require("packer").startup(function(use)
     })
 
     -- Git stuff
-    use("lewis6991/gitsigns.nvim") -- Mostly using for quick diff and blame toggle
+    use("f-person/git-blame.nvim")
 
     -- LSP and autocompletion stuff
     use("neovim/nvim-lspconfig") -- configurations for Nvim LSP
