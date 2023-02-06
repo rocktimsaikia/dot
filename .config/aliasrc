@@ -76,7 +76,9 @@ alias nL="npm ls -g"
 alias dc="docker-compose"
 
 # Codingal
-alias cg="cd ~/main/web && v ."
+alias cg="cd ~/main"
+alias cgw="cd ~/main/web"
+alias cgp="cd ~/main/api"
 alias cgpy="dc exec api manage.py shell_plus"
 alias cgpm="dc exec api manage.py migrate"
 alias cgi="cd ~/main/web/public/images"
