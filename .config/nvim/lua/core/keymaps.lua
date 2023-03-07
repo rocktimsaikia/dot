@@ -12,6 +12,10 @@ vim.g.mapleader = " "
 -- Quick bulk rename
 map("n", "<leader>n", "*:%s//")
 
+-- Select remaps
+map("n", "vv", "V")
+map("n", "V", "v$")
+
 -- Clipboard
 map("v", "<leader>y", '"+y')
 map("n", "<leader>wy", 'viw"+y')
