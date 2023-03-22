@@ -56,8 +56,12 @@ export PATH="$PATH:/usr/local/go/bin"
 # please set the environment variable RANGER_LOAD_DEFAULT_RC to FALSE.
 export RANGER_LOAD_DEFAULT_RC=false
 
-# bun
+# Bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 # bun completions
 [ -s "/home/rocktim/.bun/_bun" ] && source "/home/rocktim/.bun/_bun"
+
+# Activate pyenv upon cd if available
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
