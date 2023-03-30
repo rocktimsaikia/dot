@@ -86,6 +86,7 @@ alias cgp="cd ~/main/api"
 alias cgpy="dc exec api ./manage.py shell_plus"
 alias cgpm="dc exec api manage.py migrate"
 alias cgi="cd ~/main/web/public/images"
+alias cgv="source ~/.pyenv/versions/codingal/bin/activate"
 
 # Shortcutts
 
