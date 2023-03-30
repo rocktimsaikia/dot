@@ -177,4 +177,6 @@ return require("packer").startup(function(use)
             require("marks").setup({})
         end,
     })
+
+    use("github/copilot.vim")
 end)

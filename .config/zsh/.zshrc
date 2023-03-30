@@ -1,22 +1,3 @@
-# Automatically activate a pyenv virtual environment if .python-version file exists
-# TODO: Put it in the .zfunc
-function auto_activate_pyenv() {
-  if [ -f ".python-version" ]; then
-    local pyenv_name=$(cat .python-version)
-    if [ -d "${PYENV_ROOT:-${HOME}/.pyenv}/versions/${pyenv_name}" ]; then
-      source "${PYENV_ROOT:-${HOME}/.pyenv}/versions/${pyenv_name}/bin/activate"
-    fi
-  else
-    if [[ -n "${VIRTUAL_ENV}" ]]; then
-      deactivate
-    fi
-  fi
-}
-
-autoload -U add-zsh-hook
-add-zsh-hook chpwd auto_activate_pyenv
-
-# Custom functions
 fpath+=$HOME/.config/zsh/.zfunc
 autoload -Uz cgbuild cgcommit cgrelease
 
