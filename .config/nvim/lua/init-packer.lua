@@ -171,12 +171,31 @@ return require("packer").startup(function(use)
         end,
     })
 
+    use("github/copilot.vim")
+
+    -- Extends the default increment/decrement operators
     use({
-        "chentoast/marks.nvim",
+        "nat-418/boole.nvim",
         config = function()
-            require("marks").setup({})
+            require("boole").setup({
+                mappings = {
+                    increment = "<C-a>",
+                    decrement = "<C-x>",
+                },
+            })
         end,
     })
 
-    use("github/copilot.vim")
+    use({
+        "startup-nvim/startup.nvim",
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+        config = function()
+            require("startup").setup()
+        end,
+    })
+
+    use({
+        "junegunn/gv.vim",
+        requires = { "tpope/vim-fugitive" },
+    })
 end)

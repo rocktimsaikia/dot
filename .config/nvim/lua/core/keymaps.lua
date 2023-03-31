@@ -101,3 +101,7 @@ map("n", "S", ":SplitjoinSplit<CR>")
 
 -- Plannery mapping for running tests
 map("n", "<leader>t", "<Plug>PlenaryTestFile")
+
+-- Git commit browser
+map("n", "<leader>gb", ":GV<CR>")
+map("n", "<leader>gc", ":GV!<CR>")
