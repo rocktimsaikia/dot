@@ -89,11 +89,6 @@ map("n", "<leader>tt", ":Telescope lsp_type_definitions<CR>")
 map("n", "<leader>p", ":Telescope workspaces<CR>")
 map("n", "<leader>gs", ':lua require("telescope.builtin").git_status()<CR>')
 
--- harpoon
-map("n", "<leader>a", ':lua require("harpoon.mark").add_file()<CR>')
-map("n", "<leader>]", ':lua require("harpoon.ui").nav_next()<CR>')
-map("n", "<leader>[", ':lua require("harpoon.ui").nav_prev()<CR>')
-
 -- neogeon | create functio annotations
 map("n", "<leader>nf", ":lua require('neogen').generate()<CR>")
 
@@ -105,3 +100,7 @@ map("n", "<leader>t", "<Plug>PlenaryTestFile")
 -- Git commit browser
 map("n", "<leader>gb", ":GV<CR>")
 map("n", "<leader>gc", ":GV!<CR>")
+
+-- grapple.nvim
+map("n", "<leader>aa", ":GrapplePopup tags<CR>")
+map("n", "<leader>.", ":GrappleTag<CR>")

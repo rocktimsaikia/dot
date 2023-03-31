@@ -39,17 +39,12 @@ return require("packer").startup(function(use)
         end,
     })
 
-    -- Telescope and harpoon
-    use("ThePrimeagen/harpoon")
     use({
         "nvim-telescope/telescope.nvim",
         branch = "0.1.x",
         requires = {
             "nvim-telescope/telescope-github.nvim",
         },
-        config = function()
-            require("telescope").load_extension("harpoon")
-        end,
     })
 
     -- Git stuff
@@ -190,12 +185,31 @@ return require("packer").startup(function(use)
         "startup-nvim/startup.nvim",
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
         config = function()
-            require("startup").setup()
+            require("startup").setup({})
         end,
     })
 
+    -- Git commit browser
     use({
         "junegunn/gv.vim",
         requires = { "tpope/vim-fugitive" },
     })
+
+    -- Better cmdline UI
+    use({
+        "folke/noice.nvim",
+        config = function()
+            require("noice").setup({
+                presets = {
+                    bottom_search = true,
+                },
+            })
+        end,
+        requires = {
+            "MunifTanjim/nui.nvim",
+        },
+    })
+
+    -- Mark files and toggle inbetween them fast
+    use("cbochs/grapple.nvim")
 end)
