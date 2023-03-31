@@ -75,6 +75,7 @@ alias nL="npm ls -g"
 
 # Docker
 alias dc="docker-compose"
+alias dc-remove-nones="docker rmi $(docker images -f 'dangling=true' -q)"
 
 # Codingal
 alias cg="cd ~/main"
