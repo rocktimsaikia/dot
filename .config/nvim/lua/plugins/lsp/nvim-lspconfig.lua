@@ -73,6 +73,13 @@ require("lspconfig").tailwindcss.setup({
 require("lspconfig").pyright.setup({
     on_attach = on_attach,
     flags = lsp_flags,
+    settings = {
+        python = {
+            analysis = {
+                incremental = true,
+            },
+        },
+    },
 })
 
 -- Lua LSP setup

@@ -150,14 +150,7 @@ return require("packer").startup(function(use)
         end,
     })
 
-    use({
-        "lukas-reineke/indent-blankline.nvim",
-        config = function()
-            require("indent_blankline").setup({
-                show_end_of_line = true,
-            })
-        end,
-    })
+    use("lukas-reineke/indent-blankline.nvim")
 
     use({
         "karb94/neoscroll.nvim",
@@ -180,15 +173,6 @@ return require("packer").startup(function(use)
             })
         end,
     })
-
-    use({
-        "startup-nvim/startup.nvim",
-        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
-        config = function()
-            require("startup").setup({})
-        end,
-    })
-
     -- Git commit browser
     use({
         "junegunn/gv.vim",
@@ -212,4 +196,12 @@ return require("packer").startup(function(use)
 
     -- Mark files and toggle inbetween them fast
     use("cbochs/grapple.nvim")
+
+    -- Fancy cursor
+    use({
+        "gen740/SmoothCursor.nvim",
+        config = function()
+            require("smoothcursor").setup({})
+        end,
+    })
 end)

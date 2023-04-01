@@ -58,6 +58,7 @@ alias gbc="git branch --show-current | pbcopy"
 
 alias gst="git stash push -m"
 alias gstlist="git stash list"
+alias aic="aicommits --all"
 
 # Github
 alias glist="gh pr list -A rocktimsaikia"

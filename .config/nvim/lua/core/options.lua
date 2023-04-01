@@ -8,15 +8,15 @@ g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
 
 -- General settings
-opt.number = true
-opt.relativenumber = true
+opt.number = false
+opt.relativenumber = false
 opt.shiftwidth = 2
 opt.scrolloff = 8
 opt.termguicolors = true
--- opt.background = "transparent"
 -- Search settings
 opt.ignorecase = true
 opt.smartcase = true
+opt.swapfile = false
 
 -- Cursor line
 opt.cursorline = true
@@ -40,3 +40,4 @@ g.git_messenger_popup_content_margins = false
 
 opt.list = true
 -- opt.listchars:append("eol:↴")
+-- opt.listchars:append("space:⋅")

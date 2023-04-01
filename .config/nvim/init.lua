@@ -7,6 +7,8 @@ require("core.keymaps")
 require("plugins.nvim-treesitter")
 require("plugins.nvim-tree")
 require("plugins.lualine")
+require("plugins.indent-blankline")
+require("plugins.smooth-cursor")
 
 require("plugins.lsp.nvim-lspconfig")
 require("plugins.lsp.null-ls")
