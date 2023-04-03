@@ -44,7 +44,3 @@ autocmd("BufLeave", {
     command = "stopinsert",
 })
 
-autocmd("BufRead", {
-    pattern = "*",
-    command = ":NvimTreeClose",
-})

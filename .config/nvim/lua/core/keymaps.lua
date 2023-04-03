@@ -104,3 +104,6 @@ map("n", "<leader>gc", ":GV!<CR>")
 -- grapple.nvim
 map("n", "<leader>aa", ":GrapplePopup tags<CR>")
 map("n", "<leader>.", ":GrappleTag<CR>")
+
+-- chat GTP
+map("n", "<leader>v", ":ChatGPT<CR>")

@@ -8,8 +8,8 @@ g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
 
 -- General settings
-opt.number = false
-opt.relativenumber = false
+opt.number = true
+opt.relativenumber = true
 opt.shiftwidth = 2
 opt.scrolloff = 8
 opt.termguicolors = true
@@ -41,3 +41,5 @@ g.git_messenger_popup_content_margins = false
 opt.list = true
 -- opt.listchars:append("eol:↴")
 -- opt.listchars:append("space:⋅")
+
+opt.errorfile = os.getenv("HOME") .. "/nvim-errors.log" .. ">>"

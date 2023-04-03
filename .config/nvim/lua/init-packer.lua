@@ -30,12 +30,23 @@ return require("packer").startup(function(use)
         end,
     })
 
+    -- Color themes
+    -- use({
+    --     "sainnhe/gruvbox-material",
+    --     config = function()
+    --         vim.g.gruvbox_material_background = "hard"
+    --         vim.g.gruvbox_material_better_performance = 1
+    --         vim.cmd("colorscheme gruvbox-material")
+    --     end,
+    -- })
+
     use({
-        "sainnhe/gruvbox-material",
+        "folke/tokyonight.nvim",
         config = function()
-            vim.g.gruvbox_material_background = "hard"
-            vim.g.gruvbox_material_better_performance = 1
-            vim.cmd("colorscheme gruvbox-material")
+            vim.cmd("colorscheme tokyonight-night")
+            vim.cmd([[hi NvimTreeNormal guibg=NONE ctermbg=NONE]])
+            vim.cmd([[hi NvimTreeNormalNC guibg=NONE ctermbg=NONE]])
+            -- vim.cmd([[hi NvimTreeEndOfBuffer guibg=NONE ctermbg=NONE]])
         end,
     })
 
@@ -133,23 +144,6 @@ return require("packer").startup(function(use)
         ft = { "markdown" },
     })
 
-    use({
-        "nvim-zh/colorful-winsep.nvim",
-        config = function()
-            require("colorful-winsep").setup({
-                create_event = function()
-                    if vim.fn.winnr("$") == 3 then
-                        local win_id = vim.fn.win_getid(vim.fn.winnr("h"))
-                        local filetype = vim.api.nvim_buf_get_option(vim.api.nvim_win_get_buf(win_id), "filetype")
-                        if filetype == "NvimTree" then
-                            require("colorful-winsep").NvimSeparatorDel()
-                        end
-                    end
-                end,
-            })
-        end,
-    })
-
     use("lukas-reineke/indent-blankline.nvim")
 
     use({
@@ -182,13 +176,6 @@ return require("packer").startup(function(use)
     -- Better cmdline UI
     use({
         "folke/noice.nvim",
-        config = function()
-            require("noice").setup({
-                presets = {
-                    bottom_search = true,
-                },
-            })
-        end,
         requires = {
             "MunifTanjim/nui.nvim",
         },
@@ -203,5 +190,18 @@ return require("packer").startup(function(use)
         config = function()
             require("smoothcursor").setup({})
         end,
+    })
+
+    -- Packer
+    use({
+        "jackMort/ChatGPT.nvim",
+        config = function()
+            require("chatgpt").setup({})
+        end,
+        requires = {
+            "MunifTanjim/nui.nvim",
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim",
+        },
     })
 end)

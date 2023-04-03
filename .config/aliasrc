@@ -28,6 +28,7 @@ alias gp="git push"
 alias gpf="git push -f"
 alias gpp="git push -u origin HEAD"
 alias gl="git pull"
+alias glu="git pull upstream"
 alias gsh="git switch"
 alias gsc="git switch -c"
 alias glg="git log"
@@ -58,7 +59,7 @@ alias gbc="git branch --show-current | pbcopy"
 
 alias gst="git stash push -m"
 alias gstlist="git stash list"
-alias aic="aicommits --all"
+alias aic="aicommits --all --generate 3"
 
 # Github
 alias glist="gh pr list -A rocktimsaikia"
@@ -95,6 +96,7 @@ alias eZ="nvim ~/dotfiles/.config/zsh/.zshrc"
 alias eV='nvim ~/dotfiles/.config/nvim'
 alias eK="nvim ~/dotfiles/.config/kitty/kitty.conf"
 alias eD='nvim ~/dotfiles'
+alias enull="nvim ~/dotfiles/.config/nvim/lua/plugins/lsp/null-ls.lua"
 
 ## Directories
 alias ..="cd .."

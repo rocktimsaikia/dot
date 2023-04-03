@@ -1,7 +1,8 @@
 require("lualine").setup({
     options = {
         icons_enabled = true,
-        theme = "gruvbox-material",
+        -- theme = "gruvbox-material",
+        theme = "tokyonight",
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         disabled_filetypes = {
@@ -20,6 +21,12 @@ require("lualine").setup({
     sections = {
         lualine_a = { "mode" },
         lualine_b = {
+            "branch",
+            "diagnostics",
+        },
+        lualine_c = { { "filename", path = 1 } },
+        lualine_x = { "filetype", "%L" }, -- Total line numbers
+        lualine_y = {
             {
                 function()
                     local key = require("grapple").key()
@@ -27,12 +34,7 @@ require("lualine").setup({
                 end,
                 cond = require("grapple").exists,
             },
-            "branch",
-            "diagnostics",
         },
-        lualine_c = { { "filename", path = 1 } },
-        lualine_x = { "filetype", "%L" }, -- Total line numbers
-        lualine_y = {},
         lualine_z = {
             function()
                 return vim.fn.ObsessionStatus("Ob", "X")

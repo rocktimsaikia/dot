@@ -4,11 +4,13 @@ require("core.options")
 require("core.autocmds")
 require("core.keymaps")
 
+require("plugins.noice")
 require("plugins.nvim-treesitter")
 require("plugins.nvim-tree")
 require("plugins.lualine")
 require("plugins.indent-blankline")
 require("plugins.smooth-cursor")
+require("plugins.chat-gtp")
 
 require("plugins.lsp.nvim-lspconfig")
 require("plugins.lsp.null-ls")
