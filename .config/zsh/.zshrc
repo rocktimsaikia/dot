@@ -55,8 +55,6 @@ export PATH="$PATH:/usr/local/go/bin"
 # please set the environment variable RANGER_LOAD_DEFAULT_RC to FALSE.
 export RANGER_LOAD_DEFAULT_RC=false
 
-export OPENAI_API_KEY="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"
-
 # Bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"

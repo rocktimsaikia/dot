@@ -10,7 +10,6 @@ require("plugins.nvim-tree")
 require("plugins.lualine")
 require("plugins.indent-blankline")
 require("plugins.smooth-cursor")
-require("plugins.chat-gtp")
 
 require("plugins.lsp.nvim-lspconfig")
 require("plugins.lsp.null-ls")
