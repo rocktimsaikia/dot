@@ -20,6 +20,8 @@ alias weather="curl https://wttr.in/"
 alias tmux="tmux -u"
 
 # Git
+alias gi="git init"
+alias gra="git remote add"
 alias ga="git add"
 alias gaa="git add --all"
 alias gs="git status"
@@ -47,7 +49,7 @@ alias gcan="git commit --amend --no-edit"
 alias gempty="git commit --allow-empty -m"
 
 alias gd="git diff"
-alias gdh="git diff HEAD"
+alias gds="git diff --staged"
 alias gdp="gh pr diff"
 alias gdf="git diff --name-only"
 alias gdw="gh pr diff --web"
@@ -101,10 +103,12 @@ alias enull="nvim ~/dotfiles/.config/nvim/lua/plugins/lsp/null-ls.lua"
 ## Directories
 alias ..="cd .."
 alias D="cd ~/Downloads"
-alias cf="cd ~/.config"
+alias P="cd ~/Pictures"
 alias cdot="cd ~/dotfiles"
 alias al="cat ~/.config/aliasrc"
 alias mkcd="source ~/scripts/mkd"
 
 # Rofi
 alias rofipower="rofi -show power-menu -modi power-menu:rofi-power-menu"
+
+alias sp="sort-package-json"

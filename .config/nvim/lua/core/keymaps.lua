@@ -71,7 +71,6 @@ map("i", ";", ";<C-g>u")
 
 -- nvim-tree
 map("n", "<C-,>", ":NvimTreeFindFileToggle<CR>")
-map("n", "<C-m>", ":NvimTreeFocus<CR>")
 map("n", "<C-c>", ":NvimTreeCollapse<CR>")
 
 -- gitsigns
@@ -104,6 +103,3 @@ map("n", "<leader>gc", ":GV!<CR>")
 -- grapple.nvim
 map("n", "<leader>aa", ":GrapplePopup tags<CR>")
 map("n", "<leader>.", ":GrappleTag<CR>")
-
--- chat GTP
-map("n", "<leader>v", ":ChatGPT<CR>")
