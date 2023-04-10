@@ -42,4 +42,5 @@ opt.list = true
 -- opt.listchars:append("eol:↴")
 -- opt.listchars:append("space:⋅")
 
-opt.errorfile = os.getenv("HOME") .. "/nvim-errors.log" .. ">>"
+opt.spell = true
+opt.spelllang = "en_us"

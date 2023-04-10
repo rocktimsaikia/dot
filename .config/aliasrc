@@ -112,3 +112,7 @@ alias mkcd="source ~/scripts/mkd"
 alias rofipower="rofi -show power-menu -modi power-menu:rofi-power-menu"
 
 alias sp="sort-package-json"
+
+
+# Experimental
+alias grammerai="~/grammerai/dist/cli.mjs"

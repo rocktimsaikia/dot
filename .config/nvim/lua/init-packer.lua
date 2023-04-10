@@ -46,7 +46,6 @@ return require("packer").startup(function(use)
             vim.cmd("colorscheme tokyonight-night")
             vim.cmd([[hi NvimTreeNormal guibg=NONE ctermbg=NONE]])
             vim.cmd([[hi NvimTreeNormalNC guibg=NONE ctermbg=NONE]])
-            -- vim.cmd([[hi NvimTreeEndOfBuffer guibg=NONE ctermbg=NONE]])
         end,
     })
 
@@ -191,4 +190,6 @@ return require("packer").startup(function(use)
             require("smoothcursor").setup({})
         end,
     })
+
+    use("matze/vim-move")
 end)
