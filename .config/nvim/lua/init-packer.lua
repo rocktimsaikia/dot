@@ -113,9 +113,7 @@ return require("packer").startup(function(use)
         end,
     })
 
-    use("AndrewRadev/splitjoin.vim") -- Split oneliner to multiliner
     use("nvim-treesitter/nvim-treesitter-textobjects") -- Only using @function.inner @function.outer
-    use("rhysd/git-messenger.vim") -- Show commit history for the current line
 
     -- Useful when focus coding
     use({
@@ -191,5 +189,25 @@ return require("packer").startup(function(use)
         end,
     })
 
+    -- Visually move the selected code block
     use("matze/vim-move")
+
+    -- Basic split join
+    use({
+        "Wansmer/treesj",
+        config = function()
+            require("treesj").setup({
+                use_default_keymaps = false,
+            })
+        end,
+    })
+
+    -- Underline the current word and its occurrences
+    use("itchyny/vim-cursorword")
+
+    -- Git diff viewer
+    use({
+        "sindrets/diffview.nvim",
+        requires = "nvim-lua/plenary.nvim",
+    })
 end)

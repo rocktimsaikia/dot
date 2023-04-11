@@ -42,5 +42,5 @@ opt.list = true
 -- opt.listchars:append("eol:↴")
 -- opt.listchars:append("space:⋅")
 
-opt.spell = true
-opt.spelllang = "en_us"
+-- opt.spell = true
+-- opt.spelllang = "en_us"

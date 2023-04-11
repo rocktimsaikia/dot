@@ -79,7 +79,6 @@ map("n", "<C-c>", ":NvimTreeCollapse<CR>")
 map("n", "<leader>h", ":Telescope help_tags<CR>")
 map("n", "<leader>ff", ':lua require("telescope.builtin").find_files({ hidden=true })<CR>')
 map("n", "<leader>fg", ':lua require("telescope.builtin").live_grep()<CR>')
-map("n", "<leader>fgg", ':lua require("telescope.builtin").current_buffer_fuzzy_find()<CR>')
 map("n", "<leader>fb", ':lua require("telescope.builtin").buffers()<CR>')
 map("n", "<leader>rr", ":Telescope lsp_references<CR>")
 map("n", "<leader>gd", ":Telescope lsp_definations<CR>")
@@ -91,7 +90,7 @@ map("n", "<leader>gs", ':lua require("telescope.builtin").git_status()<CR>')
 -- neogeon | create functio annotations
 map("n", "<leader>nf", ":lua require('neogen').generate()<CR>")
 
-map("n", "S", ":SplitjoinSplit<CR>")
+map("n", "<M-s>", ":TSJToggle<CR>")
 
 -- Plannery mapping for running tests
 map("n", "<leader>t", "<Plug>PlenaryTestFile")
@@ -103,3 +102,18 @@ map("n", "<leader>gc", ":GV!<CR>")
 -- grapple.nvim
 map("n", "<leader>aa", ":GrapplePopup tags<CR>")
 map("n", "<leader>.", ":GrappleTag<CR>")
+
+-- Git diff browser
+local diffview_open = false
+
+function toggle_diffview()
+    if not diffview_open then
+        vim.cmd("DiffviewOpen")
+        diffview_open = true
+    else
+        vim.cmd("DiffviewClose")
+        diffview_open = false
+    end
+end
+
+map("n", "<leader>gd", ":lua toggle_diffview()<CR>")
