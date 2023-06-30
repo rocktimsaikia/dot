@@ -44,3 +44,5 @@ opt.list = true
 
 -- opt.spell = true
 -- opt.spelllang = "en_us"
+
+g.copilot_filetypes = { markdown = true }

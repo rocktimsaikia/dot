@@ -4,7 +4,6 @@ require("core.options")
 require("core.autocmds")
 require("core.keymaps")
 
-require("plugins.noice")
 require("plugins.nvim-treesitter")
 require("plugins.nvim-tree")
 require("plugins.lualine")

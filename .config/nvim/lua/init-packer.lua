@@ -94,17 +94,6 @@ return require("packer").startup(function(use)
         }),
     })
 
-    -- Generate function annotations
-    use({
-        "danymat/neogen",
-        config = function()
-            require("neogen").setup({})
-        end,
-    })
-
-    -- Discord rich presence
-    use("andweeb/presence.nvim")
-
     -- Peek lines as you type the line number
     use({
         "nacro90/numb.nvim",
@@ -114,21 +103,6 @@ return require("packer").startup(function(use)
     })
 
     use("nvim-treesitter/nvim-treesitter-textobjects") -- Only using @function.inner @function.outer
-
-    -- Useful when focus coding
-    use({
-        "folke/twilight.nvim",
-        config = function()
-            require("twilight").setup({})
-        end,
-    })
-
-    use({
-        "folke/zen-mode.nvim",
-        config = function()
-            require("zen-mode").setup({})
-        end,
-    })
 
     use("JoosepAlviste/nvim-ts-context-commentstring")
 
@@ -170,26 +144,11 @@ return require("packer").startup(function(use)
         requires = { "tpope/vim-fugitive" },
     })
 
-    -- Better cmdline UI
-    use({
-        "folke/noice.nvim",
-        requires = {
-            "MunifTanjim/nui.nvim",
-        },
-    })
-
     -- Mark files and toggle inbetween them fast
     use("cbochs/grapple.nvim")
 
-    -- Fancy cursor
-    use({
-        "gen740/SmoothCursor.nvim",
-        config = function()
-            require("smoothcursor").setup({})
-        end,
-    })
-
     -- Visually move the selected code block
+    -- Alt + j/k/h/l
     use("matze/vim-move")
 
     -- Basic split join
@@ -204,6 +163,14 @@ return require("packer").startup(function(use)
 
     -- Underline the current word and its occurrences
     use("itchyny/vim-cursorword")
+
+    -- Fancy cursor
+    use({
+        "gen740/SmoothCursor.nvim",
+        config = function()
+            require("smoothcursor").setup({})
+        end,
+    })
 
     -- Git diff viewer
     use({

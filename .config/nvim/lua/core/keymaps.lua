@@ -117,3 +117,5 @@ function toggle_diffview()
 end
 
 map("n", "<leader>gd", ":lua toggle_diffview()<CR>")
+
+map("n", "<leader>b", ":ls<CR>:b<Space>")
