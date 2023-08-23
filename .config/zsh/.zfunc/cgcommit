@@ -1,2 +1,13 @@
-#!/usr/bin/bash
-git commit -m "$(git branch --show-current | cut -d - -f 1,2): $1"
+#!/bin/bash
+
+# Get current branch name
+current_branch=$(git branch --show-current)
+
+# Check if current branch is master
+if [ "$current_branch" = "master" ]; then
+    git commit -m "hotfix: $1" -n
+else
+    prefix=$(echo $current_branch | cut -d - -f 1,2)
+    git commit -m "$prefix: $1" -n
+fi
+

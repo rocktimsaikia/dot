@@ -9,7 +9,6 @@ alias alist="sudo apt list --upgradable"
 alias zshrc="source ~/.config/zsh/.zshrc"
 alias ls="exa -aF"
 alias lsr="ranger"
-alias cat="bat"
 alias v="nvim"
 alias fd="fdfind"
 
@@ -41,7 +40,7 @@ alias gcp="git cherry-pick"
 alias gcl="git clone"
 alias gsa="git stash"
 alias gsp="git stash pop"
-alias gclean="git clean -df"
+alias gcln="git clean -df"
 
 
 alias gce="git commit -e -m"

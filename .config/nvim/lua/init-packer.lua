@@ -46,6 +46,7 @@ return require("packer").startup(function(use)
             vim.cmd("colorscheme tokyonight-night")
             vim.cmd([[hi NvimTreeNormal guibg=NONE ctermbg=NONE]])
             vim.cmd([[hi NvimTreeNormalNC guibg=NONE ctermbg=NONE]])
+            vim.cmd([[hi LineNr guifg='#8389a3' guibg='#1c1b1b']]) -- Line number color
         end,
     })
 

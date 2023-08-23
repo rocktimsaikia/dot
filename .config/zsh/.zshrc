@@ -46,6 +46,7 @@ export LANG='en_US.UTF-8'
 
 # bins
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/scripts:$PATH"
 export PATH="$HOME/neovim/bin:$PATH"
 export PATH="$HOME/.config/rofi/scripts:$PATH"
