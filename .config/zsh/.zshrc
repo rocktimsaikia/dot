@@ -66,3 +66,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv virtualenv-init -)"
 fi
+
+# RVM: Ruby Version Manager
+source "/etc/profile.d/rvm.sh"

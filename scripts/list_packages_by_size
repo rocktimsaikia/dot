@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# List installed packages sorted by size in human-readable format
+
+dpkg-query -W --showformat='${Installed-Size}\t${Package}\n' | sort -n -r | awk '{
+    size = $1;
+    if (size >= 1024) {
+        size = size / 1024;
+        unit = "M";
+    } else {
+        unit = "K";
+    }
+    printf "%.2f%s\t%s\n", size, unit, $2;
+}' | less
+
