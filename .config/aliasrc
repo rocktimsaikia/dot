@@ -61,7 +61,7 @@ alias gbc="git branch --show-current | pbcopy"
 
 alias gst="git stash push -m"
 alias gstlist="git stash list"
-alias aic="aicommits --all --generate 3"
+alias aic="aicommits -t conventional -a"
 
 # Github
 alias glist="gh pr list -A rocktimsaikia"
@@ -78,8 +78,8 @@ alias nl="npm ls"
 alias nL="npm ls -g"
 
 # Docker
-alias dc="docker-compose"
-alias dc-remove-nones="docker rmi $(docker images -f 'dangling=true' -q)"
+# alias dc="docker-compose"
+# alias dc-remove-nones="docker rmi $(docker images -f 'dangling=true' -q)"
 
 # Codingal
 alias cg="cd ~/main"
