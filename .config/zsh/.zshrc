@@ -59,7 +59,7 @@ export RANGER_LOAD_DEFAULT_RC=false
 # Bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-# bun completions
+# Bun completions
 [ -s "/home/rocktim/.bun/_bun" ] && source "/home/rocktim/.bun/_bun"
 
 # Pyenv-Virtualenv
@@ -69,3 +69,11 @@ fi
 
 # RVM: Ruby Version Manager
 source "/etc/profile.d/rvm.sh"
+# source ~/autoenv/activate.sh
+
+# new pyenv configurations
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

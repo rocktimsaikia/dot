@@ -50,12 +50,16 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	use({
-		"nvim-telescope/telescope.nvim",
-		branch = "0.1.x",
-		requires = {
-			"nvim-telescope/telescope-github.nvim",
-		},
+	use({ "nvim-telescope/telescope.nvim",
+		config = function()
+			require("telescope").setup({
+				defaults = {
+					preview = {
+						treesitter = false,
+					}
+				},
+			})
+		end,
 	})
 
 	-- Git stuff
@@ -117,7 +121,7 @@ return require("packer").startup(function(use)
 		ft = { "markdown" },
 	})
 
-	use("lukas-reineke/indent-blankline.nvim")
+	-- use("lukas-reineke/indent-blankline.nvim")
 
 	use({
 		"karb94/neoscroll.nvim",
@@ -169,4 +173,6 @@ return require("packer").startup(function(use)
 		"sindrets/diffview.nvim",
 		requires = "nvim-lua/plenary.nvim",
 	})
+
+	use("jremmen/vim-ripgrep")
 end)
