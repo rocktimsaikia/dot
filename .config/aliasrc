@@ -120,3 +120,4 @@ alias sp="sort-package-json"
 alias grammerai="~/grammerai/dist/cli.mjs"
 
 alias gu="bat $(git status --short | awk '{print $2}') --plain"
+alias vu="v $(git status --short | awk '{print $2}')"
