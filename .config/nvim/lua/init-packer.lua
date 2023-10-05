@@ -175,4 +175,10 @@ return require("packer").startup(function(use)
 	})
 
 	use("jremmen/vim-ripgrep")
+
+	use { "johmsalas/text-case.nvim",
+		config = function()
+			require('textcase').setup {}
+		end
+	}
 end)

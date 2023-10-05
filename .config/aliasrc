@@ -23,6 +23,7 @@ alias gi="git init"
 alias gra="git remote add"
 alias ga="git add"
 alias gaa="git add --all"
+alias gau="git add -u"
 alias gs="git status"
 alias gc="git commit -m"
 alias gp="git push"
@@ -117,3 +118,5 @@ alias sp="sort-package-json"
 
 # Experimental
 alias grammerai="~/grammerai/dist/cli.mjs"
+
+alias gu="bat $(git status --short | awk '{print $2}') --plain"

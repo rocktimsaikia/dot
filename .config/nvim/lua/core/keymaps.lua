@@ -1,9 +1,9 @@
 local function map(mode, lhs, rhs, opts)
-    local options = { noremap = true, silent = true }
-    if opts then
-        options = vim.tbl_extend("force", options, opts)
-    end
-    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+	local options = { noremap = true, silent = true }
+	if opts then
+		options = vim.tbl_extend("force", options, opts)
+	end
+	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 --- GENERAL MAPPINGS ---
@@ -107,13 +107,13 @@ map("n", "<leader>.", ":GrappleTag<CR>")
 local diffview_open = false
 
 function toggle_diffview()
-    if not diffview_open then
-        vim.cmd("DiffviewOpen")
-        diffview_open = true
-    else
-        vim.cmd("DiffviewClose")
-        diffview_open = false
-    end
+	if not diffview_open then
+		vim.cmd("DiffviewOpen")
+		diffview_open = true
+	else
+		vim.cmd("DiffviewClose")
+		diffview_open = false
+	end
 end
 
 map("n", "<leader>gd", ":lua toggle_diffview()<CR>")
