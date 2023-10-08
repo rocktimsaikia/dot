@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Open the first untraked git file
+
+untracked_file_path="$(git status --short | awk '{print $2}')"
+nvim "$untracked_file_path"

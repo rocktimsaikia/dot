@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Output the first untraked git file to stdout
+
+untracked_file_path="$(git status --short | awk '{print $2}')"
+bat "$untracked_file_path" --plain
+
