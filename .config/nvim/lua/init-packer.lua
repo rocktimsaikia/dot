@@ -181,4 +181,13 @@ return require("packer").startup(function(use)
 			require('textcase').setup {}
 		end
 	}
+
+	use({
+		"dnlhc/glance.nvim",
+		config = function()
+			require('glance').setup({
+				-- your configuration
+			})
+		end,
+	})
 end)

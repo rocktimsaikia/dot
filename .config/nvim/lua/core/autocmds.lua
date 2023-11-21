@@ -43,3 +43,10 @@ autocmd("BufLeave", {
 	pattern = "term://*",
 	command = "stopinsert",
 })
+
+autocmd("LspAttach", {
+  callback = function(ev)
+    local opts = { buffer = ev.buf }
+    vim.keymap.set("n", "<leader>v", "<cmd>vsplit | lua vim.lsp.buf.definition()<CR>", opts)
+  end
+})
