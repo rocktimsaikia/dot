@@ -13,8 +13,20 @@ return require("packer").startup(function(use)
 
 	-- tpope's stuff
 	use("tpope/vim-surround")
+
+	-- Commenting stuff
 	use("tpope/vim-commentary") -- Commenting made easy
+	use({ "JoosepAlviste/nvim-ts-context-commentstring",
+		config = function()
+			require("ts_context_commentstring").setup({})
+			vim.g.skip_ts_context_commentstring_module = true
+		end,
+	})
+
 	use("tpope/vim-unimpaired") -- Using for only :cnext and :cprevious
+
+	-- Press <C-G>c in insert mode to toggle a temporary Caps Lock or
+	-- Press gC in normal mode to toggle a permanent Caps Lock
 	use("tpope/vim-capslock")
 	use("tpope/vim-obsession")
 
@@ -23,6 +35,14 @@ return require("packer").startup(function(use)
 	use("nvim-lualine/lualine.nvim")
 	use("jiangmiao/auto-pairs")
 
+	-- Git stuff
+	use("f-person/git-blame.nvim")
+	use({
+		"sindrets/diffview.nvim",
+		requires = "nvim-lua/plenary.nvim",
+	})
+
+	-- A high-performance color highlighter for Neovim which has no external dependencies.
 	use({
 		"norcalli/nvim-colorizer.lua",
 		config = function()
@@ -61,9 +81,6 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
-
-	-- Git stuff
-	use("f-person/git-blame.nvim")
 
 	-- LSP and autocompletion stuff
 	use("neovim/nvim-lspconfig") -- configurations for Nvim LSP
@@ -108,9 +125,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	use("nvim-treesitter/nvim-treesitter-textobjects") -- Only using @function.inner @function.outer
-
-	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	use({
 		"iamcco/markdown-preview.nvim",
@@ -120,8 +134,6 @@ return require("packer").startup(function(use)
 		end,
 		ft = { "markdown" },
 	})
-
-	-- use("lukas-reineke/indent-blankline.nvim")
 
 	use({
 		"karb94/neoscroll.nvim",
@@ -144,11 +156,6 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
-	-- Git commit browser
-	use({
-		"junegunn/gv.vim",
-		requires = { "tpope/vim-fugitive" },
-	})
 
 	-- Mark files and toggle inbetween them fast
 	use("cbochs/grapple.nvim")
@@ -168,13 +175,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	-- Git diff viewer
-	use({
-		"sindrets/diffview.nvim",
-		requires = "nvim-lua/plenary.nvim",
-	})
-
-	use("jremmen/vim-ripgrep")
 
 	use { "johmsalas/text-case.nvim",
 		config = function()

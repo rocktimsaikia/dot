@@ -57,10 +57,13 @@ export PATH="$PATH:/usr/local/go/bin"
 export RANGER_LOAD_DEFAULT_RC=false
 
 # Bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-# Bun completions
-[ -s "/home/rocktim/.bun/_bun" ] && source "/home/rocktim/.bun/_bun"
+# export BUN_INSTALL="$HOME/.bun"
+# export PATH="$BUN_INSTALL/bin:$PATH"
+# # Bun completions
+# [ -s "/home/rocktim/.bun/_bun" ] && source "/home/rocktim/.bun/_bun"
+
+export DENO_INSTALL="/home/rocktim/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Pyenv-Virtualenv
 if command -v pyenv 1>/dev/null 2>&1; then

@@ -46,3 +46,7 @@ opt.list = true
 -- opt.spelllang = "en_us"
 
 g.copilot_filetypes = { markdown = true }
+
+-- Fix spell error by <C-x-s>
+opt.spell = true
+opt.spelllang = "en"
