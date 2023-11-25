@@ -121,6 +121,6 @@ alias grammerai="~/grammerai/dist/cli.mjs"
 alias bat="bat -p"
 
 # alias aic="aicommits -t conventional -a"
-alias aic="~/aicommits/dist/cli.mjs -t conventional"
+alias aic="~/aicommits/dist/cli.mjs -at conventional"
 alias dc="docker-compose"
 alias conf="cd ~/.config"
