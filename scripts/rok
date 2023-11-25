@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [[ $1 ]]; then
+  ngrok http "$1"
+fi
+
+ngrok http 3000

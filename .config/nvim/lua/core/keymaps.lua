@@ -84,7 +84,6 @@ map("n", "<leader>rr", ":Telescope lsp_references<CR>")
 map("n", "<leader>gd", ":Telescope lsp_definations<CR>")
 map("n", "<leader>tt", ":Telescope lsp_type_definitions<CR>")
 -- telescope extensions
-map("n", "<leader>p", ":Telescope workspaces<CR>")
 map("n", "<leader>gs", ':lua require("telescope.builtin").git_status()<CR>')
 
 -- neogeon | create functio annotations
@@ -127,3 +126,5 @@ vim.keymap.set('n', 'gD', '<CMD>Glance definitions<CR>')
 vim.keymap.set('n', 'gR', '<CMD>Glance references<CR>')
 vim.keymap.set('n', 'gY', '<CMD>Glance type_definitions<CR>')
 vim.keymap.set('n', 'gM', '<CMD>Glance implementations<CR>')
+
+map("n", "<leader>p", ":vsplit<CR>:b#<CR>")
