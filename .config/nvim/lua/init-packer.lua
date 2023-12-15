@@ -64,8 +64,8 @@ return require("packer").startup(function(use)
 		"folke/tokyonight.nvim",
 		config = function()
 			vim.cmd("colorscheme tokyonight-night")
-			vim.cmd([[hi NvimTreeNormal guibg=NONE ctermbg=NONE]])
-			vim.cmd([[hi NvimTreeNormalNC guibg=NONE ctermbg=NONE]])
+			-- vim.cmd([[hi NvimTreeNormal guibg=NONE ctermbg=NONE]])
+			-- vim.cmd([[hi NvimTreeNormalNC guibg=NONE ctermbg=NONE]])
 			vim.cmd([[hi LineNr guifg='#8389a3' guibg='#1c1b1b']]) -- Line number color
 		end,
 	})
@@ -99,13 +99,13 @@ return require("packer").startup(function(use)
 	})
 
 	-- File explorer | looking for alternatives
-	use({
-		"nvim-tree/nvim-tree.lua",
-		requires = {
-			"nvim-tree/nvim-web-devicons", -- optional, for file icons
-		},
-		tag = "nightly", -- optional, updated every week. (see issue #1193)
-	})
+	-- use({
+	-- 	"nvim-tree/nvim-tree.lua",
+	-- 	requires = {
+	-- 		"nvim-tree/nvim-web-devicons", -- optional, for file icons
+	-- 	},
+	-- 	tag = "nightly", -- optional, updated every week. (see issue #1193)
+	-- })
 
 	-- Auto close and auto rename html tag
 	use({
@@ -159,10 +159,6 @@ return require("packer").startup(function(use)
 
 	-- Mark files and toggle inbetween them fast
 	use("cbochs/grapple.nvim")
-
-	-- Visually move the selected code block
-	-- Alt + j/k/h/l
-	use("matze/vim-move")
 
 	-- Underline the current word and its occurrences
 	use("itchyny/vim-cursorword")

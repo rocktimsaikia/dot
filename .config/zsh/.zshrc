@@ -71,7 +71,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 # RVM: Ruby Version Manager
-source "/etc/profile.d/rvm.sh"
+# source "/etc/profile.d/rvm.sh"
 # source ~/autoenv/activate.sh
 
 # new pyenv configurations
