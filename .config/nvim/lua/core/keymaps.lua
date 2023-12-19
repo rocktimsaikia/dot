@@ -115,8 +115,6 @@ function toggle_diffview()
 	end
 end
 
-map("n", "<leader>gd", ":lua toggle_diffview()<CR>")
-
 map("n", "<leader>b", ":ls<CR>:b<Space>")
 
 map("i", "<leader>]", "<Plug>(copilot-next)")
@@ -127,7 +125,10 @@ vim.keymap.set('n', 'gR', '<CMD>Glance references<CR>')
 vim.keymap.set('n', 'gY', '<CMD>Glance type_definitions<CR>')
 vim.keymap.set('n', 'gM', '<CMD>Glance implementations<CR>')
 
+-- map to go to the previous buffer in a split
 map("n", "<leader>p", ":vsplit<CR>:b#<CR>")
+-- map to go to definition in a split
+map("n", "<leader>gd", ":vsplit<CR>:lua vim.lsp.buf.definition()<CR>")
 
 -- text-case.nvim keymaps
 -- nnoremap gal :lua require('textcase').current_word('to_lower_case')<CR>

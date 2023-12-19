@@ -107,7 +107,7 @@ require("lspconfig").lua_ls.setup({
 })
 
 -- Bash LSP setup
-require("lspconfig").bashls.setup({})
+-- require("lspconfig").bashls.setup({})
 
 require("lspconfig").gopls.setup({
     on_attach = on_attach,
