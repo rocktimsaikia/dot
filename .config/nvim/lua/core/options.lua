@@ -10,6 +10,7 @@ opt.ttimeoutlen = -1
 -- General settings
 opt.number = true
 opt.relativenumber = true
+-- opt.tabstop = 2
 opt.shiftwidth = 2
 opt.scrolloff = 8
 opt.termguicolors = true

@@ -10,5 +10,4 @@ require("plugins.lualine")
 require("plugins.smooth-cursor")
 
 require("plugins.lsp.nvim-lspconfig")
-require("plugins.lsp.null-ls")
 require("plugins.lsp.nvim-cmp")
