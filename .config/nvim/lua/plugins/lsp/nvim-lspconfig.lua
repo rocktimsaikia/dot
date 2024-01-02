@@ -63,12 +63,6 @@ require("lspconfig").tsserver.setup({
 	},
 })
 
-require("lspconfig").tailwindcss.setup({
-	filetypes = { "javascriptreact", "typescriptreact" },
-	lsp_flags = lsp_flags,
-	capabilities = capabilities,
-})
-
 -- Python
 require("lspconfig").pyright.setup({
 	on_attach = on_attach,

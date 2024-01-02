@@ -45,8 +45,8 @@ alias gcln="git clean -df"
 
 
 alias gce="git commit -e -m"
-alias gca="git commit -e --amend"
-alias gcan="git commit --amend --no-edit"
+alias gca="git commit -e --amend -n"
+alias gcan="git commit --amend --no-edit -n"
 alias gempty="git commit --allow-empty -m"
 
 alias gd="git diff"
