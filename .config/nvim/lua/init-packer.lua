@@ -198,7 +198,8 @@ return require("packer").startup(function(use)
                 formatters_by_ft = {
                     lua = { "stylua" },
                     python = { "isort", "black" },
-                    javascript = { { "prettierd", "prettier" } },
+                    javascript = { "prettier" },
+                    markdown = { "prettier" },
                 },
             })
         end,
