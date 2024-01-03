@@ -4,15 +4,6 @@ autoload -Uz cgbuild cgcommit cgrelease
 # This needs to be enabled inorder to use vcs_info_msg_0_
 setopt PROMPT_SUBST
 
-# Preload and enable vsc_info and stores data to vcs_info_msg_0_
-autoload -Uz vcs_info
-precmd () { vcs_info }
-zstyle ':vcs_info:*' formats ' %F{#4d4d51}(%b)%f'
-
-# https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
-PS1='%F{red}% 󰊠 %f%S%F{#313244} %K{#f4a97f}%~%k %f%s$vcs_info_msg_0_ '
-# #504945, #665c54, #a89984
-
 source "$XDG_CONFIG_HOME/aliasrc"
 
 # Loading package manager
@@ -84,3 +75,5 @@ eval "$(pyenv virtualenv-init -)"
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
+
+eval "$(starship init zsh)"
