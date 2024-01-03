@@ -1,6 +1,14 @@
 #!/bin/bash
 
-# Setup Neovim
+# Download and install Neovim
+cd $HOME
+wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+mkdir nvim-linux64
+tar -xzf nvim-linux64.tar.gz nvim-linux64
+ln -s ~/nvim-linux64/bin/nvim ~/.local/bin/nvim
+
+
+# Setup Neovim configuration
 ln -s ~/dot/.config/nvim ~/.config/nvim
 
 # Install packer.nvim (plugin manager)
@@ -13,7 +21,7 @@ npm install -g typescript typescript-language-server pyright @johnnymorganz/styl
 # Install the lua-language-server and make it available in $PATH
 latest_tag="$(curl -sLI https://github.com/LuaLS/lua-language-server/releases/latest | grep location | tail -1 | awk -F'/' '{print $NF}')"
 download_url="https://github.com/LuaLS/lua-language-server/releases/download/$latest_tag/lua-language-server-$latest_tag-linux-x64.tar.gz"
-wget -P $HOME "$download_url"
-cd $HOME && mkdir lua-language-server
+wget "$download_url"
+mkdir lua-language-server
 tar -xzf "lua-language-server-$latest_tag-linux-x64.tar.gz" lua-language-server
-ln -s $HOME/lua-language-server/bin/lua-language-server $HOME/.local/bin/lua-language-server
+ln -s ~/lua-language-server/bin/lua-language-server ~/.local/bin/lua-language-server
