@@ -3,6 +3,11 @@ local opt = vim.opt
 
 opt.ttimeoutlen = -1
 
+vim.opt.tabstop = 2 -- Set the number of spaces that a <Tab> in the file counts for.
+vim.opt.shiftwidth = 2 -- Set the number of spaces to use for each step of (auto)indent.
+vim.opt.expandtab = false -- Use tabs, not spaces.
+vim.opt.smarttab = true -- Insert tabs on the start of a line according to shiftwidth.
+
 -- disable netrw at the very start of your init.lua (strongly advised)
 -- g.loaded_netrw = 1
 -- g.loaded_netrwPlugin = 1
@@ -11,7 +16,6 @@ opt.ttimeoutlen = -1
 opt.number = true
 opt.relativenumber = true
 -- opt.tabstop = 2
-opt.shiftwidth = 2
 opt.scrolloff = 8
 opt.termguicolors = true
 -- Search settings
