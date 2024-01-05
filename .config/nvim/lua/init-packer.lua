@@ -61,15 +61,15 @@ return require("packer").startup(function(use)
     --     end,
     -- })
 
-    use({
-        "folke/tokyonight.nvim",
-        config = function()
-            vim.cmd("colorscheme tokyonight-night")
-            -- vim.cmd([[hi NvimTreeNormal guibg=NONE ctermbg=NONE]])
-            -- vim.cmd([[hi NvimTreeNormalNC guibg=NONE ctermbg=NONE]])
-            vim.cmd([[hi LineNr guifg='#8389a3' guibg='#1c1b1b']]) -- Line number color
-        end,
-    })
+    -- use({
+    --     "folke/tokyonight.nvim",
+    --     config = function()
+    --         vim.cmd("colorscheme tokyonight-night")
+    --         -- vim.cmd([[hi NvimTreeNormal guibg=NONE ctermbg=NONE]])
+    --         -- vim.cmd([[hi NvimTreeNormalNC guibg=NONE ctermbg=NONE]])
+    --         vim.cmd([[hi LineNr guifg='#8389a3' guibg='#1c1b1b']]) -- Line number color
+    --     end,
+    -- })
 
     use({
         "nvim-telescope/telescope.nvim",
@@ -187,6 +187,7 @@ return require("packer").startup(function(use)
         end,
     })
 
+    -- Formatter plugin
     use({
         "stevearc/conform.nvim",
         config = function()
@@ -202,6 +203,14 @@ return require("packer").startup(function(use)
                     markdown = { "prettier" },
                 },
             })
+        end,
+    })
+
+    use({
+        "Everblush/nvim",
+        as = "everblush",
+        config = function()
+            vim.cmd("colorscheme everblush")
         end,
     })
 end)
