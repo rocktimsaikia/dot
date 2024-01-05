@@ -200,7 +200,10 @@ return require("packer").startup(function(use)
                     lua = { "stylua" },
                     python = { "isort", "black" },
                     javascript = { "prettier" },
+                    typescript = { "prettier" },
+                    typescriptreact = { "prettier" },
                     markdown = { "prettier" },
+                    bash = { "shfmt" },
                 },
             })
         end,
