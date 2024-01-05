@@ -216,4 +216,11 @@ return require("packer").startup(function(use)
             vim.cmd("colorscheme everblush")
         end,
     })
+
+    use({
+        "lukas-reineke/indent-blankline.nvim",
+        config = function()
+            require("ibl").setup()
+        end,
+    })
 end)
