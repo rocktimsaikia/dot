@@ -204,6 +204,7 @@ return require("packer").startup(function(use)
                     typescriptreact = { "prettier" },
                     markdown = { "prettier" },
                     bash = { "shfmt" },
+                    go = { "gofmt" },
                 },
             })
         end,
