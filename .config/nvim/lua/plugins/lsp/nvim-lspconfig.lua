@@ -103,9 +103,11 @@ require("lspconfig").lua_ls.setup({
 -- Bash LSP setup
 -- require("lspconfig").bashls.setup({})
 
+local home_dir = os.getenv("HOME")
+
 require("lspconfig").gopls.setup({
     on_attach = on_attach,
     flags = lsp_flags,
     capabilities = capabilities,
-    cmd = { "$HOME/go/bin/gopls" },
+    cmd = { string.format("%s/go/bin/gopls", home_dir) },
 })
