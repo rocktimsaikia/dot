@@ -1,8 +1,12 @@
 #!/bin/bash
 
+command_exists() {
+	command -v "$1" > /dev/null 2>&1
+}
+
 # Install bat | A better cat
 # https://github.com/sharkdp/bat
-if [ -x "$(command -v bat)"  ]; then
+if command_exists bat; then
 	echo "- bat is already installed ✅ Skipping.."
 else
 	sudo apt install bat
@@ -12,7 +16,7 @@ fi
 
 # Install starship | A better prompt
 # https://starship.rs/guide/
-if [ -x "$(command -v starship)"  ]; then
+if command_exists starship; then
 	echo "- starship is already installed ✅ Skipping.."
 else
 	curl -sS https://starship.rs/install.sh | sh
@@ -20,7 +24,7 @@ else
 fi
 
 # Install n | Simple Node version manager
-if [-x "$(command -v n)" ]; then
+if command_exists n; then
 	echo "- n is already installed ✅ Skipping.."
 else
 	curl -L https://bit.ly/n-install | bash
