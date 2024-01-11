@@ -1,15 +1,11 @@
 #!/bin/bash
 
 # Download and install Neovim
-cd $HOME
+cd "$HOME"
 wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 mkdir nvim-linux64
 tar -xzf nvim-linux64.tar.gz nvim-linux64
 ln -s ~/nvim-linux64/bin/nvim ~/.local/bin/nvim
-
-
-# Setup Neovim configuration
-ln -s ~/dot/.config/nvim ~/.config/nvim
 
 # Install packer.nvim (plugin manager)
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
