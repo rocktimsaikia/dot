@@ -11,5 +11,5 @@ dpkg-query -W --showformat='${Installed-Size}\t${Package}\n' | sort -n -r | awk 
         unit = "K";
     }
     printf "%.2f%s\t%s\n", size, unit, $2;
-}' | less
+}'
 

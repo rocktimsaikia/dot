@@ -9,7 +9,7 @@ fi
 PORT=$1
 PID=$(lsof -t -i :"$PORT")
 
-if [ -z "$PID" ]; then
+if [ "$PID" = "" ]; then
 	echo "No process is listening on port $PORT"
 	exit 1
 else
