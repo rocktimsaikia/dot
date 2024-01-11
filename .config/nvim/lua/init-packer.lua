@@ -203,6 +203,7 @@ return require("packer").startup(function(use)
                     typescript = { "prettier" },
                     typescriptreact = { "prettier" },
                     markdown = { "prettier" },
+                    json = { "prettier" },
                     bash = { "shfmt" },
                     go = { "gofmt" },
                 },
@@ -249,5 +250,11 @@ return require("packer").startup(function(use)
                 },
             })
         end,
+    })
+
+    -- Documentation generator
+    use({
+        "kkoomen/vim-doge",
+        run = ":call doge#install()",
     })
 end)

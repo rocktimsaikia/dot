@@ -1,9 +1,9 @@
 local function map(mode, lhs, rhs, opts)
-	local options = { noremap = true, silent = true }
-	if opts then
-		options = vim.tbl_extend("force", options, opts)
-	end
-	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+    local options = { noremap = true, silent = true }
+    if opts then
+        options = vim.tbl_extend("force", options, opts)
+    end
+    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 --- GENERAL MAPPINGS ---
@@ -106,13 +106,13 @@ map("n", "<leader>.", ":GrappleTag<CR>")
 local diffview_open = false
 
 function toggle_diffview()
-	if not diffview_open then
-		vim.cmd("DiffviewOpen")
-		diffview_open = true
-	else
-		vim.cmd("DiffviewClose")
-		diffview_open = false
-	end
+    if not diffview_open then
+        vim.cmd("DiffviewOpen")
+        diffview_open = true
+    else
+        vim.cmd("DiffviewClose")
+        diffview_open = false
+    end
 end
 
 map("n", "<leader>b", ":ls<CR>:b<Space>")
@@ -120,10 +120,10 @@ map("n", "<leader>b", ":ls<CR>:b<Space>")
 map("i", "<leader>]", "<Plug>(copilot-next)")
 
 -- Lua
-vim.keymap.set('n', 'gD', '<CMD>Glance definitions<CR>')
-vim.keymap.set('n', 'gR', '<CMD>Glance references<CR>')
-vim.keymap.set('n', 'gY', '<CMD>Glance type_definitions<CR>')
-vim.keymap.set('n', 'gM', '<CMD>Glance implementations<CR>')
+vim.keymap.set("n", "gD", "<CMD>Glance definitions<CR>")
+vim.keymap.set("n", "gR", "<CMD>Glance references<CR>")
+vim.keymap.set("n", "gY", "<CMD>Glance type_definitions<CR>")
+vim.keymap.set("n", "gM", "<CMD>Glance implementations<CR>")
 
 -- map to go to the previous buffer in a split
 map("n", "<leader>p", ":vsplit<CR>:b#<CR>")
@@ -165,3 +165,5 @@ map("n", "<leader>gd", ":vsplit<CR>:lua vim.lsp.buf.definition()<CR>")
 -- nnoremap gep :lua require('textcase').operator('to_pascal_case')<CR>
 -- nnoremap get :lua require('textcase').operator('to_title_case')<CR>
 -- nnoremap gef :lua require('textcase').operator('to_path_case')<CR>
+
+vim.keymap.set("n", "<Leader>d", "<Plug>(doge-generate)")

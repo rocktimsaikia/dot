@@ -47,3 +47,7 @@ g.copilot_filetypes = { markdown = true }
 -- Fix spell error by <C-x-s>
 opt.spell = true
 opt.spelllang = "en"
+
+g.doge_doc_standard_python = "numpy"
+g.doge_enable_mappings = 0
+g.doge_buffer_mappings = 0
