@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+		echo "Usage: batch_rename <old_term> <new_term>"
+		exit 1
+fi
+
+OLD_TERM="$1"
+NEW_TERM="$2"
+
+find . -type f -exec sed -i "s#$OLD_TERM#$NEW_TERM#g" {} +
