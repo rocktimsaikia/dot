@@ -122,3 +122,7 @@ alias aic="~/aicommits/dist/cli.mjs -at conventional"
 alias dc="docker-compose"
 alias conf="cd ~/.config"
 alias cz="cz -n && gp"
+
+# This is needed to make ssh work properly with kitty
+# without issues like "terminal is not fully functional"
+alias ssh="kitty +kitten ssh"
