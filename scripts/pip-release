@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# build ad release a python package distribution to either testpypi or pypi
+# cleanup.sh
+echo "🧹 Cleaning up build artifacts..."
+rm -rf build/
+rm -rf dist/
+rm -rf *.egg-info
+echo "Cleanup complete!\n"
+
+echo "📦 Building distribution..."
+python -m build
+
+if [ "$1" == "testpypi" ]; then
+	echo "🚀 Uploading to TestPyPi..."
+	twine upload -r testpypi dist/*
+	exit 0
+elif [ "$1" == "pypi" ]; then
+	echo "🚀 Uploading to PyPi..."
+	twine upload dist/*
+	exit 0
+else
+	echo "⚠️ Invalid argument. Must be either 'testpypi' or 'pypi'."
+	exit 1
+fi

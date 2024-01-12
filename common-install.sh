@@ -20,7 +20,6 @@ if command_exists starship; then
 	echo '- "starship" is already installed ✅ Skipping..'
 else
 	curl -sS https://starship.rs/install.sh | sh
-	echo 'eval "$(starship init zsh)"' >> ~/.config/zsh/.zshrc
 fi
 
 # Install n | Simple Node version manager
@@ -30,8 +29,17 @@ else
 	curl -L https://bit.ly/n-install | bash
 fi
 
+# Install cargo | Rust package manager
 if command_exists cargo; then
 	echo '- "cargo" is already installed ✅ Skipping..'
 else
 	curl https://sh.rustup.rs -sSf | sh
+fi
+
+# Install pipx | Python package manager with isolated environments
+if command_exists pipx; then
+	echo '- "pipx" is already installed ✅ Skipping..'
+else
+	sudo apt update
+	sudo apt install pipx
 fi
