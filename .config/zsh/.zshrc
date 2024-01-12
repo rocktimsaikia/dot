@@ -77,3 +77,15 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
 eval "$(starship init zsh)"
+
+# Checks if the current dir contains any venv and activates on cd
+function activatevenv() {
+	if [[ -d "$PWD/venv" ]]; then
+		source "$PWD/venv/bin/activate"
+	fi
+}
+
+function cd() {
+	builtin cd $1
+	activatevenv
+}
