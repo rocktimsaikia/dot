@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 
-echo "Which browser do you want to use?"
-select browser in firefox brave; do
-  if [ -n "$browser" ]; then
-    export BROWSER="$browser"
-    break
-  else
-    echo "Invalid selection."
-  fi
-done
+# echo "Which browser do you want to use?"
+# select browser in firefox brave; do
+#   if [ -n "$browser" ]; then
+#     export BROWSER="$browser"
+#     break
+#   else
+#     echo "Invalid selection."
+#   fi
+# done
 
+export BROWSER=firefox
 pr_number="$(gh pr view --json number | jq '.[]')"
 if [ -n "$pr_number" ]; then
   gh browse "$pr_number" 2> /dev/null
