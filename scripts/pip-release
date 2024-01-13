@@ -6,7 +6,7 @@ echo "🧹 Cleaning up build artifacts..."
 rm -rf build/
 rm -rf dist/
 rm -rf *.egg-info
-echo "Cleanup complete!\n"
+echo "✅ Cleanup complete!"
 
 echo "📦 Building distribution..."
 python -m build
