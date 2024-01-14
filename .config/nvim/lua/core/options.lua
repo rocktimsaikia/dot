@@ -42,7 +42,7 @@ g.git_messenger_popup_content_margins = false
 -- opt.spell = true
 -- opt.spelllang = "en_us"
 
-g.copilot_filetypes = { markdown = true }
+g.copilot_filetypes = { markdown = true, yml = true }
 
 -- Fix spell error by <C-x-s>
 opt.spell = true
