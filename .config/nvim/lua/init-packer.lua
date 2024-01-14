@@ -142,7 +142,26 @@ return require("packer").startup(function(use)
         end,
     })
 
-    use("github/copilot.vim")
+    -- use("github/copilot.vim")
+    use({
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+        config = function()
+            require("copilot").setup({
+                filetypes = {
+                    markdown = true,
+                    sh = function()
+                        if string.match(vim.api.nvim_buf_get_name(0), "^%.env.*") then
+                            -- disable copilot for .env files
+                            return false
+                        end
+                        return true
+                    end,
+                },
+            })
+        end,
+    })
 
     -- Extends the default increment/decrement operators
     use({
