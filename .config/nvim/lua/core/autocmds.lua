@@ -54,8 +54,13 @@ autocmd("LspAttach", {
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*.py",
     callback = function()
+        local current_user = vim.fn.system("whoami")
+        -- trimming whitespace and newlines
+        current_user = current_user:gsub("%s+", "")
         if vim.bo.filetype == "python" then
-            vim.cmd("PyrightOrganizeImports")
+            if current_user == "rocktim" then
+                vim.cmd("PyrightOrganizeImports")
+            end
         end
     end,
 })
