@@ -277,4 +277,17 @@ return require("packer").startup(function(use)
         "kkoomen/vim-doge",
         run = ":call doge#install()",
     })
+
+    use({
+        "akinsho/toggleterm.nvim",
+        tag = "*",
+        config = function()
+            require("toggleterm").setup({
+                direction = "float",
+                float_opts = {
+                    border = "single",
+                },
+            })
+        end,
+    })
 end)

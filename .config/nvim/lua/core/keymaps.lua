@@ -168,4 +168,7 @@ map("n", "<leader>gd", ":vsplit<CR>:lua vim.lsp.buf.definition()<CR>")
 
 vim.keymap.set("n", "<Leader>d", "<Plug>(doge-generate)")
 
+-- Copy current buffer file name to clipboard
 vim.keymap.set("n", "<Leader>,", ":let @+=expand('%:t')<CR>")
+
+vim.keymap.set("n", "<Leader>t", ":ToggleTerm<CR>")
