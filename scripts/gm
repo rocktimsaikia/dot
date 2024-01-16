@@ -2,7 +2,7 @@
 # Switch to main or master branch if it exists
 
 function does_branch_exist() {
-	if git branch --list "$1" > /dev/null; then
+	if git rev-parse --verify "$1" > /dev/null 2>&1; then
 		return 0
 	else
 		return 1
@@ -13,9 +13,11 @@ MAIN_BRANCH="main"
 MASTER_BRANCH="master"
 
 if does_branch_exist "$MAIN_BRANCH"; then
+	printf "main branch exits"
 	git switch main
 	exit
 elif does_branch_exist "$MASTER_BRANCH"; then
+	printf "master branch exits"
 	git switch master
 	exit
 else
