@@ -13,6 +13,7 @@ return require("packer").startup(function(use)
 
     -- tpope's stuff
     use("tpope/vim-surround")
+    use("tpope/vim-fugitive")
 
     -- Commenting stuff
     use("tpope/vim-commentary") -- Commenting made easy
