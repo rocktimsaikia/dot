@@ -36,6 +36,10 @@ local function organize_imports()
     vim.lsp.buf.execute_command(params)
 end
 
+require("lspconfig").tailwindcss.setup({
+    filetypes = { "django-html", "html", "typescriptreact" },
+})
+
 -- Typescript LSP setup
 require("lspconfig").tsserver.setup({
     on_attach = on_attach,
