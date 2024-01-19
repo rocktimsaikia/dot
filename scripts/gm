@@ -13,11 +13,9 @@ MAIN_BRANCH="main"
 MASTER_BRANCH="master"
 
 if does_branch_exist "$MAIN_BRANCH"; then
-	printf "main branch exits"
 	git switch main
 	exit
 elif does_branch_exist "$MASTER_BRANCH"; then
-	printf "master branch exits"
 	git switch master
 	exit
 else
