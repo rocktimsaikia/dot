@@ -143,12 +143,7 @@ return require("packer").startup(function(use)
         end,
     })
 
-    use({
-        "github/copilot.vim",
-        config = function()
-            require("packer").loader("copilot.vim")
-        end,
-    })
+    use("github/copilot.vim")
     -- use({
     --     "zbirenbaum/copilot.lua",
     --     cmd = "Copilot",
