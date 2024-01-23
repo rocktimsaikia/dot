@@ -30,9 +30,6 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 antigen apply
 
-# Added by n-install (see http://git.io/n-install-repo).
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
-
 export LANG='en_US.UTF-8'
 
 # bins
@@ -61,9 +58,6 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
-# RVM: Ruby Version Manager
-# source "/etc/profile.d/rvm.sh"
-# source ~/autoenv/activate.sh
 
 # new pyenv configurations
 export PYENV_ROOT=$HOME/.pyenv
@@ -97,3 +91,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
