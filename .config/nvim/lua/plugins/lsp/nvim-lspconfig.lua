@@ -57,6 +57,14 @@ require("lspconfig").tsserver.setup({
 require("lspconfig").pyright.setup({
     on_attach = on_attach,
     flags = lsp_flags,
+    capabilities = capabilities,
+    settings = {
+        python = {
+            analysis = {
+                typeCheckingMode = "off",
+            },
+        },
+    },
 })
 
 -- Lua LSP setup

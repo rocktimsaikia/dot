@@ -231,6 +231,7 @@ return require("packer").startup(function(use)
                     json = { "prettierd" },
                     sh = { "shellharden" },
                     go = { "gofmt" },
+                    htmldjango = { "prettierd" },
                 },
             })
         end,
