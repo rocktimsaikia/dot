@@ -60,7 +60,7 @@ alias grm="git rm -r --cached"
 alias gbc="git branch --show-current | pbcopy"
 
 alias gst="git stash push -m"
-alias gstlist="git stash list"
+alias gslist="git stash list"
 
 # Github
 alias glist="gh pr list -A rocktimsaikia"
