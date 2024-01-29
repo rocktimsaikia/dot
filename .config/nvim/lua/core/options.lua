@@ -41,3 +41,7 @@ vim.opt.spelllang = "en"
 vim.g.doge_doc_standard_python = "numpy"
 vim.g.doge_enable_mappings = 0
 vim.g.doge_buffer_mappings = 0
+
+-- Netrw
+vim.g.netrw_banner = 0
+vim.g.netrw_list_hide = [[^\./,\.\./$]]
