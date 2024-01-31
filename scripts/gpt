@@ -1,4 +1,5 @@
 #!/bin/bash
+# Used for quick and simple queries
 
 source "$HOME/.env"
 MODEL="gpt-3.5-turbo"
