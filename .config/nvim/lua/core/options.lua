@@ -45,3 +45,8 @@ vim.g.doge_buffer_mappings = 0
 -- Netrw
 vim.g.netrw_banner = 0
 vim.g.netrw_list_hide = [[^\./,\.\./$]]
+-- Press `v` to open file in vertical split
+vim.g.netrw_preview = 1 -- Enable preview window
+vim.g.netrw_altv = 1 -- Open splits to the right
+vim.g.netrw_winsize = 85 -- Set initial size of netrw window
+vim.g.netrw_localrmdir = "rm -rf"
