@@ -1,3 +1,5 @@
-requirements:
+Installation:
 
-1. [Regolith](https://regolith-desktop.com/docs/using-regolith/install/): Desktop Environment
+```sh
+sudo pacman -S exa git starship kitty
+```
