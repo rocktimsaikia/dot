@@ -45,10 +45,8 @@ export PATH="$PATH:/usr/local/go/bin"
 export RANGER_LOAD_DEFAULT_RC=false
 
 # Bun
-# export BUN_INSTALL="$HOME/.bun"
-# export PATH="$BUN_INSTALL/bin:$PATH"
-# # Bun completions
-# [ -s "/home/rocktim/.bun/_bun" ] && source "/home/rocktim/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 export DENO_INSTALL="/home/rocktim/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
@@ -93,3 +91,6 @@ esac
 # pnpm end
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+
+# bun completions
+[ -s "/home/nightwarriorftw/.bun/_bun" ] && source "/home/nightwarriorftw/.bun/_bun"

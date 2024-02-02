@@ -34,8 +34,8 @@ symbol = " "
 [fossil_branch]
 symbol = " "
 
-[git_branch]
-symbol = " "
+# [git_branch]
+# symbol = " "
 
 [golang]
 symbol = " "
@@ -126,8 +126,6 @@ Ubuntu = " "
 Unknown = " "
 Windows = "󰍲 "
 
-[package]
-symbol = "󰏗 "
 
 [perl]
 symbol = " "
@@ -158,3 +156,26 @@ symbol = " "
 
 [zig]
 symbol = " "
+
+[battery]
+full_symbol = "🔋"
+charging_symbol = "🔌"
+discharging_symbol = "⚡"
+
+[[battery.display]]
+threshold = 30
+style = "bold red"
+
+[character]
+success_symbol = "[󰊠](green)"
+error_symbol = "[󰊠](red)"
+
+[git_branch]
+symbol = '🌱 '
+truncation_length = 7
+truncation_symbol = ''
+ignore_branches = ['master', 'main']
+
+[package]
+symbol = "󰏗 "
+disabled = true
