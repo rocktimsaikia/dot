@@ -90,7 +90,7 @@ alias cgv="source ~/.pyenv/versions/codingal/bin/activate"
 # Shortcutts
 
 ## Files
-alias eA="nvim ~/.config/aliasrc"
+alias eA="nvim ~/aliasrc"
 alias eZ="nvim ~/.config/zsh/.zshrc"
 alias eV='nvim ~/.config/nvim'
 alias eK="nvim ~/.config/kitty/kitty.conf"
@@ -114,7 +114,7 @@ alias grammerai="~/grammerai/dist/cli.mjs"
 
 alias bat="bat -p"
 
-alias aic="~/aicommits/dist/cli.mjs -at conventional"
+alias aic="~/aicommits-v2/dist/cli.mjs -at conventional"
 alias dc="docker compose"
 alias conf="cd ~/.config"
 alias cz="cz -n && gp"

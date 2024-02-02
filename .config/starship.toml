@@ -174,7 +174,7 @@ error_symbol = "[󰊠](red)"
 symbol = '🌱 '
 truncation_length = 7
 truncation_symbol = ''
-ignore_branches = ['master', 'main']
+# ignore_branches = ['master', 'main']
 
 [package]
 symbol = "󰏗 "
