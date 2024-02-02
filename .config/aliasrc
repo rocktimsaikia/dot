@@ -99,7 +99,7 @@ alias eK="nvim ~/.config/kitty/kitty.conf"
 alias ..="cd .."
 alias D="cd ~/Downloads"
 alias P="cd ~/Pictures"
-alias cdot="cd ~/dotfiles"
+alias cdot="cd ~/dot"
 alias al="cat ~/.config/aliasrc"
 alias mkcd="source ~/scripts/mkd"
 
