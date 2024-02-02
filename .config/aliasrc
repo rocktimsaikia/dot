@@ -76,9 +76,6 @@ alias nU="npm uninstall -g"
 alias nl="npm ls"
 alias nL="npm ls -g"
 
-# Docker
-# alias dc="docker-compose"
-# alias dc-remove-nones="docker rmi $(docker images -f 'dangling=true' -q)"
 
 # Codingal
 alias cg="cd ~/main"
@@ -118,7 +115,7 @@ alias grammerai="~/grammerai/dist/cli.mjs"
 alias bat="bat -p"
 
 alias aic="~/aicommits/dist/cli.mjs -at conventional"
-alias dc="docker-compose"
+alias dc="docker compose"
 alias conf="cd ~/.config"
 alias cz="cz -n && gp"
 
