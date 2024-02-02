@@ -21,7 +21,7 @@ cd yay
 makepkg -si
 ```
 
-3. Setup Neovim config
+3. Setup Neovim config and install Packer (Neovim plugin manager)
 
 ```sh
 ln -sf ~/dot/.config/nvim ~/.config
@@ -31,15 +31,15 @@ yay -S nvim-packer-git
 ```
 
 4. Install n (Node version manager)
-> Source: https://www.npmjs.com/package/n#installation
+> Source: https://github.com/mklement0/n-install?tab=readme-ov-file#n-install--introduction
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s lts
+curl -L https://bit.ly/n-install | bash
 ```
 
 5. Install pnpm (Node package manager)
 > Source: https://pnpm.io/installation#on-posix-systems
 
 ```sh
-icurl -fsSL https://get.pnpm.io/install.sh | sh -
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 ```
