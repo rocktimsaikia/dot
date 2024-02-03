@@ -5,12 +5,21 @@ source "$XDG_CONFIG_HOME/aliasrc"
 # Loading package manager
 source "$XDG_CONFIG_HOME/zsh/antigen.zsh"
 
-# bindkey -v
-bindkey -e
+# *** Keybindings ***
+# Bind the Tab key to 'menu-complete'
+# which cycles through possible completions when pressed
+# instead of getting all autocompletions at once
 bindkey '\t' menu-complete
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
 
+# Vim like keybindings for forward and backward word
+# Bind Ctrl+L and Ctrl+H to forward and backward word
+bindkey "^L" forward-word
+bindkey "^H" backward-word
+
+# Bind Ctrl+D to delete word forward
+bindkey "^D" kill-word
+
+# *** Antigen (Zsh plugin manager) ***
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle MichaelAquilina/zsh-you-should-use
