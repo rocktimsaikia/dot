@@ -5,6 +5,9 @@ eval "$(starship init zsh)"
 source "$HOME/.aliases"
 
 # *** Keybindings ***
+# Use emacs keybindings
+bindkey -e
+
 # Bind the Tab key to 'menu-complete'
 # which cycles through possible completions when pressed
 # instead of getting all autocompletions at once
