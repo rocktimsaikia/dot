@@ -11,8 +11,7 @@ ln -sf ~/dot/.local/bin ~/.local
 ln -sf ~/dot/.local/share/fonts ~/.local/share
 ```
 
-3. Install `yay` for installtion of AUR packages
-> Source: https://github.com/Jguer/yay?tab=readme-ov-file#source
+3. Install [`yay`](https://github.com/Jguer/yay?tab=readme-ov-file#source) for installtion of AUR packages
 
 ```sh
 pacman -S --needed git base-devel
@@ -28,17 +27,18 @@ ln -sf ~/dot/.config/nvim ~/.config
 
 # Install Packer (nvim package manager)
 yay -S nvim-packer-git
+
+# Install LSP servers and formatters
+pnpm add -g typescript typescript-language-server pyright @johnnymorganz/stylua-bin @biomejs/biome
 ```
 
-4. Install n (Node version manager)
-> Source: https://github.com/mklement0/n-install?tab=readme-ov-file#n-install--introduction
+4. Install [`n`](https://github.com/mklement0/n-install?tab=readme-ov-file#n-install--introduction) (Node version manager)
 
 ```sh
 curl -L https://bit.ly/n-install | bash
 ```
 
-5. Install pnpm (Node package manager)
-> Source: https://pnpm.io/installation#on-posix-systems
+5. Install [`pnpm`](https://pnpm.io/installation#on-posix-systems) (Node package manager)
 
 ```sh
 curl -fsSL https://get.pnpm.io/install.sh | sh -
