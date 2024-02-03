@@ -19,6 +19,9 @@ bindkey "^H" backward-word
 # Bind Ctrl+D to delete word forward
 bindkey "^D" kill-word
 
+# Bind Ctrl+L to clear the screen
+bindkey "^L" clear-screen
+
 # *** Antigen (Zsh plugin manager) ***
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
