@@ -7,7 +7,7 @@ alias aremove="sudo apt-get --purge autoremove"
 alias alist="sudo apt list --upgradable"
 
 alias zshrc="source ~/.config/zsh/.zshrc"
-alias ls="exa -aF"
+alias ls="exa -aF -1"
 alias lsr="ranger"
 alias v="nvim"
 alias fd="fdfind"

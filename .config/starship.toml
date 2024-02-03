@@ -167,8 +167,9 @@ threshold = 30
 style = "bold red"
 
 [character]
+# 󰊠 
 success_symbol = "[󰊠  ː](bold blue)"
-error_symbol = "[󰊠  ̻ː](bold red)"
+error_symbol = "[󰊠 ̻ ː](bold red)"
 
 [git_branch]
 symbol = '🌱 '
