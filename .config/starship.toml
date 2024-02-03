@@ -16,9 +16,6 @@ symbol = " "
 [dart]
 symbol = " "
 
-[directory]
-read_only = " 󰌾"
-
 [docker_context]
 symbol = " "
 
@@ -33,9 +30,6 @@ symbol = " "
 
 [fossil_branch]
 symbol = " "
-
-# [git_branch]
-# symbol = " "
 
 [golang]
 symbol = " "
@@ -168,7 +162,7 @@ style = "bold red"
 
 [character]
 # 󰊠 
-success_symbol = "[󰊠  ː](bold blue)"
+success_symbol = "[󰊠  ː](bold #7D70BA)"
 error_symbol = "[󰊠 ̻ ː](bold red)"
 
 [git_branch]
@@ -180,3 +174,18 @@ truncation_symbol = '…'
 [package]
 symbol = "󰏗 "
 disabled = true
+
+[username]
+format = """
+[░▒▓](#7D70BA)\
+[   $user](bg:#7D70BA fg:#090c0c)\
+[](fg:#7D70BA) \
+"""
+style_user = 'white bold'
+style_root = 'black bold'
+disabled = false
+show_always = true
+
+[directory]
+home_symbol = " "
+style = "green bold"
