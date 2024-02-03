@@ -1,9 +1,8 @@
+# Initialize the starship prompt
 eval "$(starship init zsh)"
 
-source "$XDG_CONFIG_HOME/aliasrc"
-
-# Loading package manager
-source "$XDG_CONFIG_HOME/zsh/antigen.zsh"
+# Load the aliases
+source "$HOME/.aliases"
 
 # *** Keybindings ***
 # Bind the Tab key to 'menu-complete'
@@ -23,6 +22,8 @@ bindkey "^D" kill-word
 bindkey "^L" clear-screen
 
 # *** Antigen (Zsh plugin manager) ***
+source "$HOME/.config/zsh/antigen.zsh"
+
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle MichaelAquilina/zsh-you-should-use
