@@ -17,18 +17,15 @@
     // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
-        "all-outputs": false,
+        "all-outputs": true,
         "warp-on-scroll": false,
-        "format": "{name}: {icon}",
+        "format": "{icon}",
+				"persistent-workspaces": {
+					"*": 5,
+				},
         "format-icons": {
-            "2": "",
-            "6": "",
-            "1": "",
-            "10": "",
-            "9": "",
-            "urgent": "",
-            "focused": "",
-            "default": ""
+						"active": "󰮯",
+						"default": ""
         }
     },
 
