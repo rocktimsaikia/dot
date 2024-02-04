@@ -292,4 +292,6 @@ return require("packer").startup(function(use)
             })
         end,
     })
+
+    use({ "jasonccox/vim-wayland-clipboard" })
 end)
