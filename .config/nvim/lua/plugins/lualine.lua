@@ -1,9 +1,9 @@
 require("lualine").setup({
     options = {
         icons_enabled = true,
-        -- theme = "gruvbox-material",
+        theme = "gruvbox-material",
         -- theme = "tokyonight",
-        theme = "everblush",
+        -- theme = "everblush",
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         disabled_filetypes = {
