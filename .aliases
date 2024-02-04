@@ -83,7 +83,7 @@ alias cgw="cd ~/main/web"
 alias cgp="cd ~/main/api"
 alias cgpy="dc exec api ./manage.py shell_plus"
 alias cgdb="docker exec -it cgdb mysql -u root -p"
-alias cgpm="dc exec api manage.py migrate"
+alias cgpm="dc exec api ./manage.py"
 alias cgi="cd ~/main/web/public/images"
 alias cgv="source ~/.pyenv/versions/codingal/bin/activate"
 
@@ -128,3 +128,5 @@ alias chat="firefox https://chat.openai.com/ > /dev/null 2>&1"
 # The single quotes are important here so that the command is not executed immediately
 alias groot='cd $(git rev-parse --show-toplevel)'
 alias browser='firefox > /dev/null 2>&1 &'
+
+alias obsidian="~/Downloads/Obsidian-1.5.3.AppImage > /dev/null 2>&1 &"
