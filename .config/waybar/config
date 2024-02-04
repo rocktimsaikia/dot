@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     "height": 30,
-    "spacing": 5,
+    "spacing": 0,
 
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "custom/media"],
