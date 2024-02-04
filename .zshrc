@@ -25,7 +25,7 @@ bindkey "^D" kill-word
 bindkey "^L" clear-screen
 
 # *** Antigen (Zsh plugin manager) ***
-source "$HOME/.config/zsh/antigen.zsh"
+source $HOME/antigen.zsh
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
@@ -52,11 +52,11 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # new pyenv configurations
-export PYENV_ROOT=$HOME/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# export PYENV_ROOT=$HOME/.pyenv
+# export PATH=$PYENV_ROOT/bin:$PATH
+# eval "$(pyenv init --path)"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 # Checks if the current dir contains any venv and activates on cd
 function activatevenv() {
@@ -70,6 +70,9 @@ function cd() {
 	activatevenv
 }
 
+# Added by n-install (see http://git.io/n-install-repo).
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
+
 # pnpm
 export PNPM_HOME="$HOME/.config/local/share/pnpm"
 case ":$PATH:" in
@@ -77,8 +80,3 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
-
-# bun completions
-[ -s "/home/nightwarriorftw/.bun/_bun" ] && source "/home/nightwarriorftw/.bun/_bun"

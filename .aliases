@@ -6,7 +6,7 @@ alias aupgrade="sudo apt upgrade"
 alias aremove="sudo apt-get --purge autoremove"
 alias alist="sudo apt list --upgradable"
 
-alias zshrc="source ~/.config/zsh/.zshrc"
+alias zshrc="source ~/.zshrc"
 alias ls="exa -aF -1"
 alias lsr="ranger"
 alias v="nvim"
@@ -100,8 +100,7 @@ alias ..="cd .."
 alias D="cd ~/Downloads"
 alias P="cd ~/Pictures"
 alias cdot="cd ~/dot"
-alias al="cat ~/.config/aliasrc"
-alias mkcd="source ~/scripts/mkd"
+alias mkcd="source ~/.local/bin/mkd"
 
 # Rofi
 alias rofipower="rofi -show power-menu -modi power-menu:rofi-power-menu"
