@@ -127,3 +127,4 @@ alias chat="firefox https://chat.openai.com/ > /dev/null 2>&1"
 
 # The single quotes are important here so that the command is not executed immediately
 alias groot='cd $(git rev-parse --show-toplevel)'
+alias browser='firefox > /dev/null 2>&1 &'
