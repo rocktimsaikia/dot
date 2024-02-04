@@ -53,14 +53,14 @@ return require("packer").startup(function(use)
     })
 
     -- Color themes
-    -- use({
-    --     "sainnhe/gruvbox-material",
-    --     config = function()
-    --         vim.g.gruvbox_material_background = "hard"
-    --         vim.g.gruvbox_material_better_performance = 1
-    --         vim.cmd("colorscheme gruvbox-material")
-    --     end,
-    -- })
+    use({
+        "sainnhe/gruvbox-material",
+        config = function()
+            vim.g.gruvbox_material_background = "hard"
+            vim.g.gruvbox_material_better_performance = 1
+            vim.cmd("colorscheme gruvbox-material")
+        end,
+    })
 
     -- use({
     --     "folke/tokyonight.nvim",
@@ -70,6 +70,15 @@ return require("packer").startup(function(use)
     --         -- vim.cmd([[hi NvimTreeNormalNC guibg=NONE ctermbg=NONE]])
     --         vim.cmd([[hi LineNr guifg='#8389a3' guibg='#1c1b1b']]) -- Line number color
     --     end,
+
+    -- use({
+    --    "Everblush/nvim",
+    --    as = "everblush",
+    --    config = function()
+    --        vim.cmd("colorscheme everblush")
+    --    end,
+    -- })
+
     -- })
 
     use({
@@ -229,14 +238,6 @@ return require("packer").startup(function(use)
                     htmldjango = { "prettierd" },
                 },
             })
-        end,
-    })
-
-    use({
-        "Everblush/nvim",
-        as = "everblush",
-        config = function()
-            vim.cmd("colorscheme everblush")
         end,
     })
 
