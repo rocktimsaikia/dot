@@ -17,6 +17,8 @@ map . set hidden!
 set delete ask
 map D delete
 
+map Y &echo $fx | wl-copy
+
 # set '-eu' options for shell commands
 # These options are used to have safer shell commands. Option '-e' is used to
 # exit on error and option '-u' is used to give error for unset variables.
@@ -104,6 +106,7 @@ cmd tar ${{
     tar czf $1.tar.gz $1
     rm -rf $1
 }}
+
 
 # compress current file or selected files with zip
 cmd zip ${{
