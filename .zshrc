@@ -46,8 +46,7 @@ antigen apply
 export LANG='en_US.UTF-8'
 
 # bins
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/neovim/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 # Bun
 export BUN_INSTALL="$HOME/.bun"
