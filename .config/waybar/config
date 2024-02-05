@@ -168,3 +168,5 @@
         "exec":"$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
     }
 }
+
+# vim: ft=json
