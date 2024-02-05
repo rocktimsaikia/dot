@@ -47,6 +47,7 @@ export LANG='en_US.UTF-8'
 
 # bins
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Bun
 export BUN_INSTALL="$HOME/.bun"
