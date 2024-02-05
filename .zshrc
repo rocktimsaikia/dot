@@ -4,6 +4,8 @@ eval "$(starship init zsh)"
 # Load the aliases
 source "$HOME/.aliases"
 
+export EDITOR="nvim"
+
 # *** Keybindings ***
 # Use emacs keybindings
 bindkey -e
