@@ -46,7 +46,7 @@ antigen apply
 export LANG='en_US.UTF-8'
 
 # bins
-export PATH="$HOME/bin:$PATH"
+export PIPX_BIN_DIR="~/.local/pipx-bin"
 
 # Bun
 export BUN_INSTALL="$HOME/.bun"
