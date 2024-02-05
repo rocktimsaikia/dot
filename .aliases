@@ -91,7 +91,7 @@ alias cgv="source ~/.pyenv/versions/codingal/bin/activate"
 
 ## Files
 alias eA="nvim ~/.aliases"
-alias eZ="nvim ~/.config/zsh/.zshrc"
+alias eZ="nvim ~/.zshrc"
 alias eV='nvim ~/.config/nvim'
 alias eK="nvim ~/.config/kitty/kitty.conf"
 
@@ -111,7 +111,7 @@ alias sp="sort-package-json"
 # Experimental
 alias grammerai="~/grammerai/dist/cli.mjs"
 
-alias bat="bat -p"
+alias bat="bat --plain --theme gruvbox-dark"
 
 alias aic="~/aicommits-v2/dist/cli.mjs -t conventional"
 alias dc="docker compose"
