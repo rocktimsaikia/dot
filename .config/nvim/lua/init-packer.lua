@@ -236,6 +236,7 @@ return require("packer").startup(function(use)
                     sh = { "shellharden" },
                     go = { "gofmt" },
                     htmldjango = { "prettierd" },
+                    rust = { "rustfmt" },
                 },
             })
         end,
