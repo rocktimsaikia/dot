@@ -234,8 +234,8 @@ return require("packer").startup(function(use)
                     markdown = { { "biome", "prettierd" } },
                     json = { { "biome", "prettierd" } },
                     sh = { "shellharden" },
-                    go = { "gofmt" },
-                    htmldjango = { "prettierd" },
+                    go = { "gofmt", "golines" },
+                    htmldjango = nil,
                     rust = { "rustfmt" },
                 },
             })
