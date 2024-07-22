@@ -76,3 +76,11 @@ function cd() {
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
 alias luamake="/home/rocktimsaikia/lua-language-server/3rd/luamake/luamake"
+
+# pnpm
+export PNPM_HOME="/home/rocktimsaikia/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

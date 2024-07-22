@@ -54,13 +54,21 @@ return require("packer").startup(function(use)
 
     -- Color themes
     use({
-        "sainnhe/gruvbox-material",
+        "nyngwang/nvimgelion",
         config = function()
-            vim.g.gruvbox_material_background = "hard"
-            vim.g.gruvbox_material_better_performance = 1
-            vim.cmd("colorscheme gruvbox-material")
+            vim.cmd("colorscheme nvimgelion")
+            -- do whatever you want for further customization~
         end,
     })
+
+    -- use({
+    --     "sainnhe/gruvbox-material",
+    --     config = function()
+    --         vim.g.gruvbox_material_background = "hard"
+    --         vim.g.gruvbox_material_better_performance = 1
+    --         vim.cmd("colorscheme gruvbox-material")
+    --     end,
+    -- })
 
     -- use({
     --     "folke/tokyonight.nvim",
