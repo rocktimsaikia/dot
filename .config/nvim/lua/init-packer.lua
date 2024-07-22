@@ -186,9 +186,6 @@ return require("packer").startup(function(use)
         end,
     })
 
-    -- Mark files and toggle inbetween them fast
-    use("cbochs/grapple.nvim")
-
     -- Underline the current word and its occurrences
     use("itchyny/vim-cursorword")
 

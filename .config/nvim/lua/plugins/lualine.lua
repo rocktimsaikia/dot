@@ -27,15 +27,7 @@ require("lualine").setup({
         },
         lualine_c = { { "filename", path = 1 } },
         lualine_x = { "filetype", "%L" }, -- Total line numbers
-        lualine_y = {
-            {
-                function()
-                    local key = require("grapple").key()
-                    return "  [" .. key .. "]"
-                end,
-                cond = require("grapple").exists,
-            },
-        },
+        lualine_y = {},
         lualine_z = {
             function()
                 return vim.fn.ObsessionStatus("Ob", "X")
