@@ -228,9 +228,9 @@ return require("packer").startup(function(use)
                 formatters_by_ft = {
                     lua = { "stylua" },
                     python = { "black" },
-                    javascript = { { "biome", "prettierd" } },
-                    typescript = { { "biome", "prettierd" } },
-                    typescriptreact = { { "biome", "prettierd" } },
+                    javascript = { "biome" },
+                    typescript = { "biome" },
+                    typescriptreact = { "biome" },
                     markdown = { { "biome", "prettierd" } },
                     json = { { "biome", "prettierd" } },
                     sh = { "shellharden" },
