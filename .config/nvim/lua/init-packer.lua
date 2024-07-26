@@ -129,11 +129,7 @@ return require("packer").startup(function(use)
     -- Auto close and auto rename html tag
     use({
         "windwp/nvim-ts-autotag",
-        require("nvim-treesitter.configs").setup({
-            autotag = {
-                enable = true,
-            },
-        }),
+        require("nvim-ts-autotag").setup(),
     })
 
     -- Peek lines as you type the line number
@@ -284,19 +280,6 @@ return require("packer").startup(function(use)
     use({
         "kkoomen/vim-doge",
         run = ":call doge#install()",
-    })
-
-    use({
-        "akinsho/toggleterm.nvim",
-        tag = "*",
-        config = function()
-            require("toggleterm").setup({
-                direction = "float",
-                float_opts = {
-                    border = "single",
-                },
-            })
-        end,
     })
 
     use({ "jasonccox/vim-wayland-clipboard" })
