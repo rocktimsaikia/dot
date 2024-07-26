@@ -104,5 +104,6 @@ typescript \
 typescript-language-server \
 pyright \
 @johnnymorganz/stylua-bin \
-@biomejs/biome
+@biomejs/biome \
+@tailwindcss/language-server
 ```
