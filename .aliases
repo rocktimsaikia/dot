@@ -92,7 +92,7 @@ alias cgv="source ~/.pyenv/versions/codingal/bin/activate"
 ## Files
 alias eA="nvim ~/.aliases"
 alias eZ="nvim ~/.zshrc"
-alias eV='nvim ~/.config/nvim'
+alias eV='nvim ~/.config/nvim/lua'
 alias eK="nvim ~/.config/kitty/kitty.conf"
 
 ## Directories

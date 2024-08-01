@@ -171,4 +171,4 @@ vim.keymap.set("n", "<Leader>d", "<Plug>(doge-generate)")
 -- Copy current buffer file name to clipboard
 vim.keymap.set("n", "<Leader>,", ":let @+=expand('%:t')<CR>")
 
-vim.keymap.set("n", "<Leader>f", ":ToggleTerm<CR>")
+vim.keymap.set("n", "<Leader>cx", "<Plug>ColorConvertCycle")

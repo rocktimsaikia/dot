@@ -231,15 +231,31 @@ return require("packer").startup(function(use)
                     python = { "black" },
                     javascript = { "biome" },
                     typescript = { "biome" },
+                    javascriptreact = { "biome" },
                     typescriptreact = { "biome" },
-                    markdown = { "biome", "prettierd", stop_after_first = true },
+                    markdown = { "prettierd" },
                     json = { "biome", "prettierd", stop_after_first = true },
+                    yaml = { "biome" },
+                    css = { "biome" },
                     sh = { "shellharden" },
                     go = { "gofmt", "golines" },
                     htmldjango = nil,
                     rust = { "rustfmt" },
                 },
             })
+        end,
+    })
+
+    --- Linkter plugin
+    use({
+        "mfussenegger/nvim-lint",
+        config = function()
+            require("lint").linters_by_ft = {
+                javascript = { "biomejs" },
+                typescript = { "biomejs" },
+                javascriptreact = { "biomejs" },
+                typescriptreact = { "biomejs" },
+            }
         end,
     })
 
@@ -255,7 +271,7 @@ return require("packer").startup(function(use)
                 -- vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
                 -- vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
                 -- vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
-                -- vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
+                -- vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "rgb(198, 120, 221)" })
                 -- vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
                 vim.api.nvim_set_hl(0, "Lowcontrast", { fg = "#232a2d" }) -- Taken from  Everblush kitty theme's color0
             end)
@@ -283,4 +299,6 @@ return require("packer").startup(function(use)
     })
 
     use({ "jasonccox/vim-wayland-clipboard" })
+
+    use("NTBBloodbath/color-converter.nvim")
 end)
