@@ -44,7 +44,7 @@ return require("packer").startup(function(use)
         requires = "nvim-lua/plenary.nvim",
     })
 
-    -- A high-performance color highlighter for Neovim which has no external dependencies.
+    -- A high-performance color highlighter
     use({
         "norcalli/nvim-colorizer.lua",
         config = function()
@@ -117,15 +117,6 @@ return require("packer").startup(function(use)
         end,
     })
 
-    -- File explorer | looking for alternatives
-    -- use({
-    -- 	"nvim-tree/nvim-tree.lua",
-    -- 	requires = {
-    -- 		"nvim-tree/nvim-web-devicons", -- optional, for file icons
-    -- 	},
-    -- 	tag = "nightly", -- optional, updated every week. (see issue #1193)
-    -- })
-
     -- Auto close and auto rename html tag
     use({
         "windwp/nvim-ts-autotag",
@@ -157,25 +148,6 @@ return require("packer").startup(function(use)
     })
 
     use("github/copilot.vim")
-    -- use({
-    --     "zbirenbaum/copilot.lua",
-    --     cmd = "Copilot",
-    --     event = "InsertEnter",
-    --     config = function()
-    --         require("copilot").setup({
-    --             filetypes = {
-    --                 markdown = true,
-    --                 sh = function()
-    --                     if string.match(vim.api.nvim_buf_get_name(0), "^%.env.*") then
-    --                         -- disable copilot for .env files
-    --                         return false
-    --                     end
-    --                     return true
-    --                 end,
-    --             },
-    --         })
-    --     end,
-    -- })
 
     -- Extends the default increment/decrement operators
     use({
@@ -246,7 +218,7 @@ return require("packer").startup(function(use)
         end,
     })
 
-    --- Linkter plugin
+    --- Linnter plugin
     use({
         "mfussenegger/nvim-lint",
         config = function()
@@ -263,27 +235,19 @@ return require("packer").startup(function(use)
         "lukas-reineke/indent-blankline.nvim",
         config = function()
             local hooks = require("ibl.hooks")
-            -- create the highlight groups in the highlight setup hook, so they are reset
-            -- every time the colorscheme changes
+            -- create the highlight groups in the highlight setup hook,
+            -- so they are reset every time the colorscheme changes
             hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-                -- vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
-                -- vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
-                -- vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
-                -- vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
-                -- vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
-                -- vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "rgb(198, 120, 221)" })
-                -- vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
-                vim.api.nvim_set_hl(0, "Lowcontrast", { fg = "#232a2d" }) -- Taken from  Everblush kitty theme's color0
+                vim.api.nvim_set_hl(0, "Lowcontrast", { fg = "#232a2d" })
             end)
 
             require("ibl").setup({
                 indent = {
                     char = "▏",
-                    -- char = "",
                     highlight = { "Lowcontrast" },
                 },
                 scope = {
-                    enabled = false,
+                    enabled = true,
                     highlight = {
                         "@function",
                     },
@@ -300,5 +264,10 @@ return require("packer").startup(function(use)
 
     use({ "jasonccox/vim-wayland-clipboard" })
 
-    use("NTBBloodbath/color-converter.nvim")
+    use({
+        "rocktimsaikia/color-switch.nvim",
+        config = function()
+            require("color-switch")
+        end,
+    })
 end)
