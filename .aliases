@@ -130,4 +130,5 @@ alias chat="firefox https://chat.openai.com/ > /dev/null 2>&1"
 alias groot='cd $(git rev-parse --show-toplevel)'
 alias browser='firefox > /dev/null 2>&1 &'
 
-alias obsidian="~/Downloads/Obsidian-1.5.3.AppImage > /dev/null 2>&1 &"
+alias md="make-dir"
+alias greset="rm -rf .git && git init"

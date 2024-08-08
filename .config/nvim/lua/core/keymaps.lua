@@ -166,9 +166,9 @@ map("n", "<leader>gd", ":vsplit<CR>:lua vim.lsp.buf.definition()<CR>")
 -- nnoremap get :lua require('textcase').operator('to_title_case')<CR>
 -- nnoremap gef :lua require('textcase').operator('to_path_case')<CR>
 
-vim.keymap.set("n", "<Leader>d", "<Plug>(doge-generate)")
+vim.keymap.set("n", "<Leader>do", "<Plug>(doge-generate)")
 
 -- Copy current buffer file name to clipboard
 vim.keymap.set("n", "<Leader>,", ":let @+=expand('%:t')<CR>")
 
-vim.keymap.set("n", "<Leader>cs", ":ColorSwitch<CR>")
+vim.keymap.set("n", "<Leader>cs", "<CMD>ColorSwitch<CR>")
