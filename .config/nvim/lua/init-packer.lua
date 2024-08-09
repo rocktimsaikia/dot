@@ -52,14 +52,21 @@ return require("packer").startup(function(use)
         end,
     })
 
-    -- Color themes
     use({
-        "nyngwang/nvimgelion",
+        "rebelot/kanagawa.nvim",
         config = function()
-            vim.cmd("colorscheme nvimgelion")
-            -- do whatever you want for further customization~
+            vim.cmd("colorscheme kanagawa")
         end,
     })
+
+    -- Color themes
+    -- use({
+    --     "nyngwang/nvimgelion",
+    --     config = function()
+    --         vim.cmd("colorscheme nvimgelion")
+    --         -- do whatever you want for further customization~
+    --     end,
+    -- })
 
     -- use({
     --     "sainnhe/gruvbox-material",
@@ -147,8 +154,6 @@ return require("packer").startup(function(use)
         end,
     })
 
-    use("github/copilot.vim")
-
     -- Extends the default increment/decrement operators
     use({
         "nat-418/boole.nvim",
@@ -218,7 +223,7 @@ return require("packer").startup(function(use)
         end,
     })
 
-    --- Linnter plugin
+    --- Linter plugin
     use({
         "mfussenegger/nvim-lint",
         config = function()
@@ -264,10 +269,17 @@ return require("packer").startup(function(use)
 
     use({ "jasonccox/vim-wayland-clipboard" })
 
+    -- Toggle between HEX and RGB color formats inline
     use({
         "rocktimsaikia/color-switch.nvim",
         config = function()
             require("color-switch")
         end,
     })
+
+    -- Co-pilot alternative
+    use("Exafunction/codeium.vim")
+
+    -- Fast vim motions and jumping
+    use("justinmk/vim-sneak")
 end)

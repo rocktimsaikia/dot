@@ -115,10 +115,6 @@ function toggle_diffview()
     end
 end
 
-map("n", "<leader>b", ":ls<CR>:b<Space>")
-
-map("i", "<leader>]", "<Plug>(copilot-next)")
-
 -- Lua
 vim.keymap.set("n", "gD", "<CMD>Glance definitions<CR>")
 vim.keymap.set("n", "gR", "<CMD>Glance references<CR>")
