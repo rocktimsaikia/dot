@@ -282,4 +282,12 @@ return require("packer").startup(function(use)
 
     -- Fast vim motions and jumping
     use("justinmk/vim-sneak")
+
+    use({
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        config = function()
+            require("nvim-autopairs").setup({})
+        end,
+    })
 end)
