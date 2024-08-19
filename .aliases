@@ -1,14 +1,6 @@
 # System
-alias a="sudo apt"
-alias ainstall="sudo apt install"
-alias aupdate="sudo apt update"
-alias aupgrade="sudo apt upgrade"
-alias aremove="sudo apt-get --purge autoremove"
-alias alist="sudo apt list --upgradable"
-
 alias zshrc="source ~/.zshrc"
 alias ls="exa -aF -1"
-alias lsr="ranger"
 alias v="nvim"
 alias fd="fdfind"
 
@@ -121,7 +113,7 @@ alias cz="cz -n && gp"
 
 # This is needed to make ssh work properly with kitty
 # without issues like "terminal is not fully functional"
-alias ssh="kitty +kitten ssh"
+# alias ssh="kitty +kitten ssh"
 
 alias co="gh copilot"
 alias chat="firefox https://chat.openai.com/ > /dev/null 2>&1"

@@ -205,7 +205,7 @@ return require("packer").startup(function(use)
                 },
                 formatters_by_ft = {
                     lua = { "stylua" },
-                    python = { "black" },
+                    python = { "isort", "black" },
                     javascript = { "biome" },
                     typescript = { "biome" },
                     javascriptreact = { "biome" },
@@ -290,4 +290,7 @@ return require("packer").startup(function(use)
             require("nvim-autopairs").setup({})
         end,
     })
+
+    -- Fast escape with jk
+    use({ "jdhao/better-escape.vim", event = "InsertEnter" })
 end)
