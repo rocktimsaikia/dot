@@ -62,25 +62,6 @@ alias gcreate="gh pr create --assignee @me"
 alias gview="gh release view"
 alias gis="gh issue list"
 
-# NPM
-alias nI="npm install -g"
-alias nU="npm uninstall -g"
-alias nl="npm ls"
-alias nL="npm ls -g"
-
-
-# Codingal
-alias cg="cd ~/main"
-alias cgw="cd ~/main/web"
-alias cgp="cd ~/main/api"
-alias cgpy="dc exec api ./manage.py shell_plus"
-alias cgdb="docker exec -it cgdb mysql -u root -p"
-alias cgpm="dc exec api ./manage.py"
-alias cgi="cd ~/main/web/public/images"
-alias cgv="source ~/.pyenv/versions/codingal/bin/activate"
-
-# Shortcutts
-
 ## Files
 alias eA="nvim ~/.aliases"
 alias eZ="nvim ~/.zshrc"
