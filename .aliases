@@ -87,7 +87,7 @@ alias grammerai="~/grammerai/dist/cli.mjs"
 
 alias bat="bat --plain --theme gruvbox-dark"
 
-alias aic="~/aicommits-v2/dist/cli.mjs -t conventional"
+alias aic="~/aicommits-v2/dist/cli.mjs -at conventional"
 alias dc="docker compose"
 alias conf="cd ~/.config"
 alias cz="cz -n && gp"
@@ -105,3 +105,5 @@ alias browser='firefox > /dev/null 2>&1 &'
 
 alias md="make-dir"
 alias greset="rm -rf .git && git init"
+
+alias discord="discord > /dev/null 2>&1 &"
