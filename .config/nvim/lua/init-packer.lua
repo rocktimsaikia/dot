@@ -205,7 +205,7 @@ return require("packer").startup(function(use)
                 },
                 formatters_by_ft = {
                     lua = { "stylua" },
-                    python = { "isort", "black" },
+                    python = { "isort", "ruff" },
                     javascript = { "biome" },
                     typescript = { "biome" },
                     javascriptreact = { "biome" },
@@ -278,7 +278,7 @@ return require("packer").startup(function(use)
     })
 
     -- Co-pilot alternative
-    use("Exafunction/codeium.vim")
+    -- use("Exafunction/codeium.vim")
 
     -- Fast vim motions and jumping
     use("justinmk/vim-sneak")
@@ -293,4 +293,18 @@ return require("packer").startup(function(use)
 
     -- Fast escape with jk
     use({ "jdhao/better-escape.vim", event = "InsertEnter" })
+
+    -- Bookmark manager
+    use({
+        "otavioschwanck/arrow.nvim",
+        config = function()
+            require("arrow").setup({
+                show_icons = false,
+                leader_key = ";", -- Recommended to be a single key
+                buffer_leader_key = "m", -- Per Buffer Mappings
+            })
+        end,
+    })
+
+    use({ "LunarVim/bigfile.nvim" })
 end)

@@ -168,3 +168,5 @@ vim.keymap.set("n", "<Leader>do", "<Plug>(doge-generate)")
 vim.keymap.set("n", "<Leader>,", ":let @+=expand('%:t')<CR>")
 
 vim.keymap.set("n", "<Leader>cs", "<CMD>ColorSwitch<CR>")
+
+vim.keymap.set("n", "-", "<CMD>Ex<CR>")
