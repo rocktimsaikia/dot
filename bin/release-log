@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# If no argument is passed, then default to 1
+if [ "$1" = "" ]; then
+    set -- 1
+fi
+
+# Get the last tag
+last_tag=$(git describe --tags --abbrev=0 HEAD~"$1")
+
+# Get the commits since the last tag
+commits="## What's Changed"$'\n'"$(git log $last_tag..HEAD --pretty=format:'- %s by @%an in %H')"
+
+# Copy to clipboard
+echo "$commits" | xclip -selection clipboard
+

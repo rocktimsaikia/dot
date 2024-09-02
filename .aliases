@@ -106,4 +106,4 @@ alias browser='firefox > /dev/null 2>&1 &'
 alias md="make-dir"
 alias greset="rm -rf .git && git init"
 
-# alias discord="discord --enable-gpu-rasterization > /dev/null 2>&1 &"
+alias kazam="kazam > /dev/null 2>&1 &"

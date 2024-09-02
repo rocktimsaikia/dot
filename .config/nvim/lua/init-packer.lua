@@ -205,7 +205,7 @@ return require("packer").startup(function(use)
                 },
                 formatters_by_ft = {
                     lua = { "stylua" },
-                    python = { "isort", "ruff" },
+                    python = { "isort", "black" },
                     javascript = { "biome" },
                     typescript = { "biome" },
                     javascriptreact = { "biome" },
@@ -218,6 +218,7 @@ return require("packer").startup(function(use)
                     go = { "gofmt", "golines" },
                     htmldjango = nil,
                     rust = { "rustfmt" },
+                    gleam = { "gleam" },
                 },
             })
         end,

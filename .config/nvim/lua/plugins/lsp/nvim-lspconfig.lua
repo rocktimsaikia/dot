@@ -102,3 +102,5 @@ require("lspconfig").gopls.setup({
     capabilities = capabilities,
     cmd = { string.format("%s/go/bin/gopls", home_dir) },
 })
+
+require("lspconfig").gleam.setup({})
