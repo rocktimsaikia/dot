@@ -56,6 +56,8 @@ return require("packer").startup(function(use)
         "rebelot/kanagawa.nvim",
         config = function()
             vim.cmd("colorscheme kanagawa")
+            vim.opt.colorcolumn = "80"
+            vim.cmd([[highlight ColorColumn ctermbg=None guibg=#232423]])
         end,
     })
 
@@ -219,6 +221,7 @@ return require("packer").startup(function(use)
                     htmldjango = nil,
                     rust = { "rustfmt" },
                     gleam = { "gleam" },
+                    c = { "clang-format" },
                 },
             })
         end,
