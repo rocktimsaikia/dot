@@ -208,11 +208,12 @@ return require("packer").startup(function(use)
                 formatters_by_ft = {
                     lua = { "stylua" },
                     python = { "isort", "black" },
+                    html = { "prettierd" },
                     javascript = { "biome" },
                     typescript = { "biome" },
                     javascriptreact = { "biome" },
                     typescriptreact = { "biome" },
-                    markdown = { "prettierd" },
+                    -- markdown = { "prettierd" },
                     json = { "biome", "prettierd", stop_after_first = true },
                     yaml = { "biome" },
                     css = { "biome" },
@@ -311,4 +312,13 @@ return require("packer").startup(function(use)
     })
 
     use({ "LunarVim/bigfile.nvim" })
+
+    use({
+        "barrett-ruth/live-server.nvim",
+        run = "pnpm add -g live-server",
+        cmd = { "LiveServerStart", "LiveServerStop" },
+        config = function()
+            require("live-server").setup()
+        end,
+    })
 end)
