@@ -53,9 +53,9 @@ return require("packer").startup(function(use)
     })
 
     use({
-        "rebelot/kanagawa.nvim",
+        "xero/miasma.nvim",
         config = function()
-            vim.cmd("colorscheme kanagawa")
+            vim.cmd("colorscheme miasma")
             vim.opt.colorcolumn = "80"
             vim.cmd([[highlight ColorColumn ctermbg=None guibg=#232423]])
         end,
@@ -190,9 +190,7 @@ return require("packer").startup(function(use)
     use({
         "dnlhc/glance.nvim",
         config = function()
-            require("glance").setup({
-                -- your configuration
-            })
+            require("glance").setup({})
         end,
     })
 
@@ -266,12 +264,6 @@ return require("packer").startup(function(use)
         end,
     })
 
-    -- Documentation generator
-    use({
-        "kkoomen/vim-doge",
-        run = ":call doge#install()",
-    })
-
     use({ "jasonccox/vim-wayland-clipboard" })
 
     -- Toggle between HEX and RGB color formats inline
@@ -319,6 +311,14 @@ return require("packer").startup(function(use)
         cmd = { "LiveServerStart", "LiveServerStop" },
         config = function()
             require("live-server").setup()
+        end,
+    })
+
+    use({
+        "samharju/yeet.nvim",
+        cmd = "Yeet",
+        config = function()
+            require("yeet").setup({})
         end,
     })
 end)

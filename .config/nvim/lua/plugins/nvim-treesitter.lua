@@ -13,6 +13,7 @@ require("nvim-treesitter.configs").setup({
         "markdown",
         "bash",
         "rust",
+        "vimdoc",
     },
     highlight = {
         -- `false` will disable the whole extension
