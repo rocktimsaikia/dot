@@ -278,7 +278,7 @@ return require("packer").startup(function(use)
     -- use("Exafunction/codeium.vim")
 
     -- Fast vim motions and jumping
-    use("justinmk/vim-sneak")
+    -- use("justinmk/vim-sneak")
 
     use({
         "windwp/nvim-autopairs",
@@ -292,16 +292,16 @@ return require("packer").startup(function(use)
     use({ "jdhao/better-escape.vim", event = "InsertEnter" })
 
     -- Bookmark manager
-    use({
-        "otavioschwanck/arrow.nvim",
-        config = function()
-            require("arrow").setup({
-                show_icons = false,
-                leader_key = ";", -- Recommended to be a single key
-                buffer_leader_key = "m", -- Per Buffer Mappings
-            })
-        end,
-    })
+    -- use({
+    --     "otavioschwanck/arrow.nvim",
+    --     config = function()
+    --         require("arrow").setup({
+    --             show_icons = false,
+    --             leader_key = ";", -- Recommended to be a single key
+    --             buffer_leader_key = "m", -- Per Buffer Mappings
+    --         })
+    --     end,
+    -- })
 
     use({ "LunarVim/bigfile.nvim" })
 
@@ -319,6 +319,13 @@ return require("packer").startup(function(use)
         cmd = "Yeet",
         config = function()
             require("yeet").setup({})
+        end,
+    })
+
+    use({
+        "stevearc/oil.nvim",
+        config = function()
+            require("oil").setup()
         end,
     })
 end)
