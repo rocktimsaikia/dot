@@ -43,6 +43,11 @@ if [ -z "$name" ]; then
 	exit 1
 fi
 
+# Accept either the short name or a fully-qualified branch (e.g. pasted from
+# `git branch`); strip the prefix so an existing branch doesn't end up as
+# rocktimsaikia/rocktimsaikia/<name>.
+name=${name#"$BRANCH_PREFIX"}
+
 branch="$BRANCH_PREFIX$name"
 dir="$BASE_DIR/$name"
 
