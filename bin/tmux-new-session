@@ -18,8 +18,17 @@ directories=()
 if [[ -d "$current_dir/.git" ]]; then
 	directories+=("$current_dir")
 fi
+# A git repo directly under $HOME is a candidate. A non-git dir might still hold
+# git projects one level down (e.g. ~/codingal/main), so descend one level into
+# those and pick up any repos there too.
 while IFS= read -r -d '' dir; do
-	[[ -d "$dir/.git" ]] && directories+=("$dir")
+	if [[ -d "$dir/.git" ]]; then
+		directories+=("$dir")
+	else
+		while IFS= read -r -d '' sub; do
+			[[ -d "$sub/.git" ]] && directories+=("$sub")
+		done < <(find "$dir" -mindepth 1 -maxdepth 1 -type d ! -name '.*' -print0 2>/dev/null)
+	fi
 done < <(find "$HOME" -mindepth 1 -maxdepth 1 -type d ! -name '.*' -print0 2>/dev/null)
 
 # ponytail: directory mtime approximates activity; track picker selections if precision matters.
